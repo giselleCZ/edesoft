@@ -1,0 +1,8 @@
+bin\Debug\LDAP.dll
+bin\Debug\LDAP.pdb
+bin\Debug\Interop.ActiveDs.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.ActiveDs.dll
+obj\Debug\LDAP.csproj.ResolveComReference.cache
+obj\Debug\LDAP.dll
+obj\Debug\LDAP.pdb
