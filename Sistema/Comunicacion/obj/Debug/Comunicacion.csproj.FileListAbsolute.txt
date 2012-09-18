@@ -1,0 +1,10 @@
+C:\Diego\NUR\Diplomado Software\Arquitectura\Comunicacion\bin\Debug\Comunicacion.dll
+C:\Diego\NUR\Diplomado Software\Arquitectura\Comunicacion\bin\Debug\Comunicacion.pdb
+C:\Diego\NUR\Diplomado Software\Arquitectura\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Diego\NUR\Diplomado Software\Arquitectura\Comunicacion\obj\Debug\Comunicacion.dll
+C:\Diego\NUR\Diplomado Software\Arquitectura\Comunicacion\obj\Debug\Comunicacion.pdb
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Comunicacion\bin\Debug\Comunicacion.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Comunicacion\bin\Debug\Comunicacion.pdb
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Comunicacion\obj\Debug\Comunicacion.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Comunicacion\obj\Debug\Comunicacion.pdb

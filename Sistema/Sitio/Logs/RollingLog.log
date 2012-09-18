@@ -1,0 +1,117 @@
+2010-07-07 19:25:29,411 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpUnhandledException: Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Exception: sdf
+   en Sitio._Default.Page_Load(Object sender, EventArgs e) en C:\Diego\NUR\Diplomado Software\Arquitectura\Sitio\Default.aspx.cs:línea 29
+   en System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.default_aspx.ProcessRequest(HttpContext context) en c:\Users\diegozm\AppData\Local\Temp\Temporary ASP.NET Files\root\624a710d\79e417fb\App_Web_lhbypgwe.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-07-07 19:49:20,961 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpException: El archivo '/Default2.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   en System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-07-07 19:50:00,294 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpException: El archivo '/Default2.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   en System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-07-07 19:51:01,115 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpException: El archivo '/Defaul2t.aspx' no existe.
+   en System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   en System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-07-07 20:01:16,378 [10] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - The employee dfgdfg was inserted.
+2010-07-07 20:10:32,305 [8] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - The employee dfsdfsdfsfdasdfa was inserted.
+2010-07-07 20:11:38,194 [8] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado 123 fue insertado.
+2010-07-07 20:49:37,011 [13] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado fffff fue insertado.
+2010-07-07 20:51:01,454 [13] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado ddd fue insertado.
+2010-07-07 20:52:38,273 [13] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado sdfgsd fue insertado.
+2010-07-07 20:53:56,663 [13] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado cbcbc fue insertado.
+2010-07-07 21:26:43,458 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado a fue insertado.
+2010-07-07 21:26:47,124 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado b fue insertado.
+2010-07-07 21:26:49,776 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado v fue insertado.
+2010-07-07 21:26:52,989 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado c fue insertado.
+2010-07-07 21:26:54,955 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado d fue insertado.
+2010-07-07 21:26:56,858 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado e fue insertado.
+2010-07-07 21:26:59,276 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado f fue insertado.
+2010-07-07 21:27:01,834 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado g fue insertado.
+2010-07-07 21:27:05,110 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado h fue insertado.
+2010-07-07 21:27:10,539 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado i fue insertado.
+2010-07-07 21:46:40,329 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado dfsdf fue insertado.
+2010-07-07 21:47:26,386 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado sdfsd fue insertado.
+2010-07-07 21:50:10,540 [9] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado sdfs fue insertado.
+2010-07-07 22:04:02,972 [11] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado sdfsd fue insertado.
+2010-07-09 01:10:50,842 [11] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado Ejemplo fue insertado.
+2010-07-09 01:11:04,945 [11] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado Nancy fue insertado.
+2010-07-09 01:11:10,293 [11] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado Diego fue insertado.
+2010-07-09 01:11:17,475 [11] INFO  Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteInfo line 22 - El empleado David fue insertado.
+2010-08-28 11:27:55,532 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpCompileException: c:\Diego\Trabajo\NUR\Diplomado Software\CAD\Arquitectura\Sitio\Default.aspx(81): error CS1061: 'ASP.default_aspx' no contiene una definición de 'btnGuardar_Click' ni se encontró ningún método de extensión 'btnGuardar_Click' que acepte un primer argumento de tipo 'ASP.default_aspx' (¿falta una directiva using o una referencia de ensamblado?)
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   en System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2010-08-28 11:30:04,340 [4] ERROR Todo [(null)] - CAINCO\diegozm - Instrumentacion.TextLogs.WriteError line 17 - Error: 
+System.Web.HttpUnhandledException: Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'. ---> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:46383
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.Sockets.Socket.InternalConnect(EndPoint remoteEP)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   en Sitio.localhost.Consulta.TraerEmpleados() en C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Sitio\Web References\localhost\Reference.cs:línea 83
+   en Sitio._Default.GetDatos() en C:\Diego\Trabajo\NUR\Diplomado Software\CAD\Arquitectura\Sitio\Default.aspx.cs:línea 116
+   en Sitio._Default.Page_Load(Object sender, EventArgs e) en C:\Diego\Trabajo\NUR\Diplomado Software\CAD\Arquitectura\Sitio\Default.aspx.cs:línea 35
+   en System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   en System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   en System.Web.UI.Control.OnLoad(EventArgs e)
+   en System.Web.UI.Control.LoadRecursive()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.default_aspx.ProcessRequest(HttpContext context) en c:\Users\diegozm\AppData\Local\Temp\Temporary ASP.NET Files\root\0c07fd84\39cfd7da\App_Web_qiqlg4ij.0.cs:línea 0
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

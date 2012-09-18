@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TraerEmpleados">
+        <s:complexType />
+      </s:element>
+      <s:element name="TraerEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraerEmpleadosResult" type="tns:ArrayOfEmpleado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmpleado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Empleado" nillable="true" type="tns:Empleado" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Empleado">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TraerEmpleadoXId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraerEmpleadoXIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraerEmpleadoXIdResult" type="tns:ArrayOfEmpleado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TraerEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:TraerEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="TraerEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:TraerEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraerEmpleadoXIdSoapIn">
+    <wsdl:part name="parameters" element="tns:TraerEmpleadoXId" />
+  </wsdl:message>
+  <wsdl:message name="TraerEmpleadoXIdSoapOut">
+    <wsdl:part name="parameters" element="tns:TraerEmpleadoXIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaSoap">
+    <wsdl:operation name="TraerEmpleados">
+      <wsdl:input message="tns:TraerEmpleadosSoapIn" />
+      <wsdl:output message="tns:TraerEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpleadoXId">
+      <wsdl:input message="tns:TraerEmpleadoXIdSoapIn" />
+      <wsdl:output message="tns:TraerEmpleadoXIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaSoap" type="tns:ConsultaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TraerEmpleados">
+      <soap:operation soapAction="http://tempuri.org/TraerEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpleadoXId">
+      <soap:operation soapAction="http://tempuri.org/TraerEmpleadoXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultaSoap12" type="tns:ConsultaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TraerEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/TraerEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraerEmpleadoXId">
+      <soap12:operation soapAction="http://tempuri.org/TraerEmpleadoXId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Consulta">
+    <wsdl:port name="ConsultaSoap" binding="tns:ConsultaSoap">
+      <soap:address location="http://localhost:46383/Consulta.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConsultaSoap12" binding="tns:ConsultaSoap12">
+      <soap12:address location="http://localhost:46383/Consulta.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

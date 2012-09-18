@@ -1,0 +1,12 @@
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\bin\Debug\Instrumentacion.dll
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\bin\Debug\Instrumentacion.pdb
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\obj\Debug\Instrumentacion.dll
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\obj\Debug\Instrumentacion.pdb
+C:\Diego\NUR\Diplomado Software\Arquitectura\Instrumentacion\bin\Debug\log4net.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\bin\Debug\Instrumentacion.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\bin\Debug\Instrumentacion.pdb
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\bin\Debug\log4net.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\obj\Debug\Instrumentacion.dll
+C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Instrumentacion\obj\Debug\Instrumentacion.pdb
