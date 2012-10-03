@@ -7,6 +7,12 @@ namespace RN.Entidades
     {
         #region Atributos
         private int codigo;
+
+        public int Codigo1
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         private DateTime fecha;
         private string nombreFactura;
         private string nitFactura;

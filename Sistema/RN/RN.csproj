@@ -66,6 +66,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\clsCostCenter.cs" />
+    <Compile Include="Entidades\clsLocation.cs" />
+    <Compile Include="Entidades\clsRevalue.cs" />
+    <Compile Include="Entidades\clsFamily.cs" />
+    <Compile Include="Entidades\clsResponsible.cs" />
+    <Compile Include="Entidades\clsAsigRespActive.cs" />
+    <Compile Include="Entidades\clsActive.cs" />
+    <Compile Include="Entidades\clsSubFamily.cs" />
+    <Compile Include="Entidades\clsAsignPointsActives.cs" />
+    <Compile Include="Entidades\clsDecline.cs" />
+    <Compile Include="Entidades\clsProvider.cs" />
+    <Compile Include="Entidades\clsPoints.cs" />
+    <Compile Include="Entidades\clsArea.cs" />
+    <Compile Include="Entidades\clsSubArea.cs" />
+    <Compile Include="Entidades\clsProviderType.cs" />
+    <Compile Include="Entidades\clsProgram.cs" />
+    <Compile Include="Entidades\clsPrivileges.cs" />
+    <Compile Include="Entidades\clsRol.cs" />
+    <Compile Include="Entidades\clsInsurance.cs" />
+    <Compile Include="Entidades\clsResponsible_type.cs" />
+    <Compile Include="Entidades\clsPersonCostCenter.cs" />
     <Compile Include="Workflows\WFactura.cs" />
     <Compile Include="Entidades\DFactura.cs" />
     <Compile Include="Entidades\Empleado.cs" />
