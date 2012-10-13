@@ -67,9 +67,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAOPrograma.cs" />
+    <Compile Include="DAO\DAOActive.cs" />
     <Compile Include="DAO\DAODFactura.cs" />
     <Compile Include="DAO\DAOEmpleado.cs" />
     <Compile Include="DAO\DAOFactura.cs" />
+    <Compile Include="DAO\DAOProvider.cs" />
+    <Compile Include="DAO\DAOProviderType.cs" />
     <Compile Include="IConexion.cs" />
     <Compile Include="OleDbConexion.cs" />
     <Compile Include="SQLConexion.cs" />
