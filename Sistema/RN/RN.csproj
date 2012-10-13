@@ -66,6 +66,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\CProvider.cs" />
+    <Compile Include="Componentes\CProviderType.cs" />
     <Compile Include="Entidades\clsCostCenter.cs" />
     <Compile Include="Entidades\clsLocation.cs" />
     <Compile Include="Entidades\clsRevalue.cs" />
