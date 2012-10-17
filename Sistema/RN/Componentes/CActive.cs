@@ -50,46 +50,70 @@ namespace RN.Componentes
         }
         #endregion
         #region Selects
-        public static List<Empleado> SelectAll()
+        public static List<clsActive> SelectAll()
         {
             DAOActive daoProxy = new DAOActive();
             DataSet dtsProxy = daoProxy.selectAll();
 
-            return CargarLista(dtsProxy.Tables[0]);
+            return LoadList(dtsProxy.Tables[0]);
         }
-        public static List<Empleado> TraerXId(int codigo)
+        public static List<clsActive> SelectRow(int codigo)
         {
-            DAOEmpleado daoProxy = new DAOEmpleado();
-            DataSet dtsProxy = daoProxy.TraerEmpleadoXId(codigo);
+            DAOActive daoProxy = new DAOActive();
+            DataSet dtsProxy = daoProxy.selectRow(codigo);
 
-            
-            return CargarLista(dtsProxy.Tables[0]);
+            return LoadList(dtsProxy.Tables[0]);
         }
-        public static List<Empleado> TraerXNombre(string nombre)
+        public static List<clsActive> SelectByName(string nombre)
         {
-            DAOEmpleado daoProxy = new DAOEmpleado();
-            DataSet dtsProxy = daoProxy.TraerEmpleadoXNombre(nombre);
+            DAOActive daoProxy = new DAOActive();
+            DataSet dtsProxy = daoProxy.selectByName(nombre);
 
 
-            return CargarLista(dtsProxy.Tables[0]);
+            return LoadList(dtsProxy.Tables[0]);
         }
         #endregion
         #region Metodos Privados
-        private static List<Empleado> CargarLista(DataTable tabla)
+        private static List<clsActive> LoadList(DataTable tabla)
         {
-            List<Empleado> lstProxy = new List<Empleado>();
+            List<clsActive> lstProxy = new List<clsActive>();
 
             foreach (DataRow fila in tabla.Rows)
             {
-                lstProxy.Add(Cargar(fila));
+                lstProxy.Add(Load(fila));
             }
             return lstProxy;
         }
-        private static Empleado Cargar(DataRow fila)
+        private static clsActive Load(DataRow fila)
         {
-            Empleado objProxy = new Empleado();
-            objProxy.Codigo = Convert.ToInt32(fila["codigo"]);
-            objProxy.Nombre = fila["nombre"].ToString();
+            clsActive objProxy = new clsActive();
+
+            objProxy.IActive_id= Convert.ToInt32(fila["iActive_id"]);
+            objProxy.SActive_name= fila["sActive_name"].ToString();
+            objProxy.SStatus = fila["sStatus"].ToString();
+            objProxy.ISubFamily_id.ISubFamily_id = Convert.ToInt32(fila["iSubFamily_id"]);
+            objProxy.IProvider_id.IProvider_id = Convert.ToInt32(fila["iProvider_id"]);
+            objProxy.SBarCode = fila["sBarCode"].ToString();
+            objProxy.DRegister_time = Convert.ToDateTime(fila["dtRegister_time"]);
+            objProxy.IUtilTime = Convert.ToInt32(fila["iUtilTime"]);
+            objProxy.SBrand = fila["sBrand"].ToString();
+            objProxy.SModel = fila["sModel"].ToString();
+            objProxy.SForm = fila["sForm"].ToString();
+            objProxy.SSerialNumber = fila["sSerialNumber"].ToString();
+            objProxy.SColor = fila["sColor"].ToString();
+            objProxy.SCapacity = fila["sCapacity"].ToString();
+            objProxy.SMaterial = fila["sMaterial"].ToString();
+            objProxy.IHeihgt = Convert.ToInt32(fila["iHeihgt"]);
+            objProxy.IWidth = Convert.ToInt32(fila["iWidth"]);
+            objProxy.IWide = Convert.ToInt32(fila["iWide"]);
+            objProxy.IDiameter = Convert.ToInt32(fila["iDiameter"]);
+            objProxy.SUnit = fila["sUnit"].ToString();
+            objProxy.IDivNumber = Convert.ToInt32(fila["iDivNumber"]);
+            objProxy.SAsignation_Type = fila["sAsignation_Type"].ToString();
+            objProxy.SAdquisition_Type = fila["sAdquisition_Type"].ToString();
+            objProxy.DBuy_time = Convert.ToDateTime(fila["dtBuy_time"]);
+            objProxy.IBuyPrice = Convert.ToInt32(fila["iBuyPrice"]);
+            objProxy.BInactive = Convert.ToBoolean(fila["bInactive"]);
             return objProxy;
         }
         #endregion

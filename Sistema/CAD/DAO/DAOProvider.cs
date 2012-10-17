@@ -8,7 +8,7 @@ using System.Data;
 
 namespace CAD.DAO
 {
-    class DAOProvider
+    public class DAOProvider
     {
         public int Insertar(string nombre, string apellido, int id_tipoProveedor, int telefono, string contacto_nm, string direccion, string descripcion)
         {

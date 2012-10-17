@@ -15,11 +15,12 @@ namespace RN.Entidades
             private string sPerson_lname;
             private string sPerson_phone;
             private string sPerson_email;
+            private string sPerson_dni;
             private string sUsername;
             private string sPassword;
             private DateTime dStart_time;
             private DateTime dEnd_time;
-
+            private bool bStatus;
         #endregion
         #region Propiedades
             public int IResponsible_id
@@ -39,6 +40,12 @@ namespace RN.Entidades
             {
                 get { return sPerson_name; }
                 set { sPerson_name = value; }
+            }
+
+            public string SPerson_dni
+            {
+                get { return sPerson_dni; }
+                set { sPerson_dni = value; }
             }
 
             public string SPerson_lname
@@ -87,6 +94,13 @@ namespace RN.Entidades
                 get { return dEnd_time; }
                 set { dEnd_time = value; }
             }
+
+            public bool BStatus
+            {
+                get { return bStatus; }
+                set { bStatus = value; }
+            }
+
 
         #endregion
         #region Metodos

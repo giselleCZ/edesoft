@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\CActive.cs" />
+    <Compile Include="Componentes\CAsigResponsibleActive.cs" />
+    <Compile Include="Componentes\CResponsible.cs" />
     <Compile Include="Componentes\CProvider.cs" />
     <Compile Include="Componentes\CProviderType.cs" />
     <Compile Include="Entidades\clsCostCenter.cs" />
@@ -73,7 +76,7 @@
     <Compile Include="Entidades\clsRevalue.cs" />
     <Compile Include="Entidades\clsFamily.cs" />
     <Compile Include="Entidades\clsResponsible.cs" />
-    <Compile Include="Entidades\clsAsigRespActive.cs" />
+    <Compile Include="Entidades\clsAsigResponsibleActive.cs" />
     <Compile Include="Entidades\clsActive.cs" />
     <Compile Include="Entidades\clsSubFamily.cs" />
     <Compile Include="Entidades\clsAsignPointsActives.cs" />
