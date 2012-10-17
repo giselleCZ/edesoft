@@ -7,8 +7,9 @@ namespace RN.Entidades
 {
     class clsActive
     {
-        #region Atributos
+        #region Atributos            
             private int iActive_id;
+            private string sActive_name;
             private clsProvider iProvider_id;
             private clsSubFamily iSubFamily_id;
             private string sActive_desc;
@@ -33,12 +34,37 @@ namespace RN.Entidades
             private string sAcquisition_Type;
             private DateTime dtBuy_time;
             private int iBuy_price;
+            private bool bInactive;
         #endregion
         #region Propiedades
             public int IActive_id
             {
                 get { return iActive_id; }
                 set { iActive_id = value; }
+            }
+
+            public clsProvider IProvider_id
+            {
+                get { return iProvider_id; }
+                set { iProvider_id = value; }
+            }
+
+            public clsSubFamily ISubFamily_id
+            {
+                get { return iSubFamily_id; }
+                set { iSubFamily_id = value; }
+            }
+
+            public bool BInactive
+            {
+                get { return bInactive; }
+                set { bInactive = value; }
+            }
+
+            public string SActive_name
+            {
+                get { return sActive_name; }
+                set { sActive_name = value; }
             }
 
             public string SBarCode
@@ -66,7 +92,7 @@ namespace RN.Entidades
                 set { iUtilTime = value; }
             }
 
-            public string SState
+            public string SStatus
             {
                 get { return sStatus; }
                 set { sStatus = value; }

@@ -67,6 +67,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAOAsigResponsibleActive.cs" />
+    <Compile Include="DAO\DAOResponsible.cs" />
     <Compile Include="DAO\DAOPrograma.cs" />
     <Compile Include="DAO\DAOActive.cs" />
     <Compile Include="DAO\DAODFactura.cs" />
