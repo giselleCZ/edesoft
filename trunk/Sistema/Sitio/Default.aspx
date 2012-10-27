@@ -69,7 +69,8 @@
                         <col width="*" />
                     </colgroup>
                     <tr>
-                        <td colspan="3"><strong style="font-size:18px"><asp:Literal runat="server" ID="lblTitulo" meta:resourcekey="lblTitulo"></asp:Literal></strong></td>
+                        <td colspan="3"><strong style="font-size:18px"><asp:Literal runat="server" ID="lblTitulo" meta:resourcekey="lblTitulo"></asp:Literal>
+                            fgfg</strong></td>
                     </tr>
                     <tr>
                         <td><asp:Literal runat="server" ID="lblNombre" meta:resourcekey="lblNombre"></asp:Literal></td>
