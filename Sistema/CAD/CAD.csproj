@@ -67,20 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAORol.cs" />
     <Compile Include="DAO\DAOAsigResponsibleActive.cs" />
     <Compile Include="DAO\DAOResponsible.cs" />
-    <Compile Include="DAO\DAOPrograma.cs" />
     <Compile Include="DAO\DAOActive.cs" />
-    <Compile Include="DAO\DAODFactura.cs" />
     <Compile Include="DAO\DAOEmpleado.cs" />
-    <Compile Include="DAO\DAOFactura.cs" />
     <Compile Include="DAO\DAOProvider.cs" />
     <Compile Include="DAO\DAOProviderType.cs" />
     <Compile Include="IConexion.cs" />
     <Compile Include="OleDbConexion.cs" />
     <Compile Include="SQLConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkFlows\WFLFactura.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Instrumentacion\Instrumentacion.csproj">
@@ -104,6 +101,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WorkFlows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

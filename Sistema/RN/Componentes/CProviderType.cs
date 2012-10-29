@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace RN.Componentes
 {
-    class CProviderType
+    public class CProviderType
     {
         #region DMLS
         public static bool Insertar(clsProviderType objProxy)
@@ -35,7 +35,7 @@ namespace RN.Componentes
                 throw x;
 
             DAOProviderType daoProxy = new DAOProviderType();
-            return daoProxy.Actualizar(objProxy.IProviderType_id, objProxy.SProvider_type);
+            return true;//daoProxy.Actualizar(objProxy.IProviderType_id, objProxy.SProvider_type);
         }
         public static bool EliminarTipoProveedor(int codigo)
         {
@@ -51,7 +51,7 @@ namespace RN.Componentes
         }
         #endregion
         #region Selects
-        public static List<clsProvider> Traer()
+        /*public static List<clsProvider> Traer()
         {
             DAOProviderType daoProxy = new DAOProviderType();
             DataSet dtsProxy = daoProxy.TraerProveedorTipo();
@@ -73,7 +73,7 @@ namespace RN.Componentes
 
 
             return CargarLista(dtsProxy.Tables[0]);
-        }
+        }*/
         #endregion
         #region Metodos Privados
         private static List<clsProviderType> CargarLista(DataTable tabla)

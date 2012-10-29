@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsAsigResponsibleActive
+    public class clsAsigResponsibleActive
     {
         #region Atributos
             private int iAsigRespActive_id;

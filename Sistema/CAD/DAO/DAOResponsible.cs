@@ -19,7 +19,7 @@ namespace CAD.DAO
             int iRol_id,
             DateTime dtStart_time,
             DateTime dtEnd_time,
-            bool sStatus)
+            int sStatus)
             {
                 List<DbParameter> lstParametros = new List<DbParameter>();
                 DbParameter prmId = new SqlParameter();
@@ -27,6 +27,13 @@ namespace CAD.DAO
                 prmId.ParameterName = "@id";
                 prmId.Direction = ParameterDirection.Output;
                 lstParametros.Add(prmId);
+
+                DbParameter prmsPerson_lname = new SqlParameter();
+                prmsPerson_lname.DbType = DbType.String;
+                prmsPerson_lname.ParameterName = "@sPerson_lname";
+                prmsPerson_lname.Value = sPerson_lname;
+                prmsPerson_lname.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsPerson_lname);
 
                 DbParameter prmsPerson_name = new SqlParameter();
                 prmsPerson_name.DbType = DbType.String;
@@ -36,9 +43,9 @@ namespace CAD.DAO
                 lstParametros.Add(prmsPerson_name);
 
                 DbParameter prmsStatus = new SqlParameter();
-                prmsStatus.DbType = DbType.Binary;
+                prmsStatus.DbType = DbType.Int32;
                 prmsStatus.ParameterName = "@sStatus";
-                prmsStatus.Value = sStatus;
+                prmsStatus.Value = Convert.ToInt32(sStatus);
                 prmsStatus.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsStatus);
 
@@ -85,7 +92,7 @@ namespace CAD.DAO
                 lstParametros.Add(prmdtStart_time);
 
                 DbParameter prmdtEnd_time = new SqlParameter();
-                prmdtEnd_time.DbType = DbType.Int32;
+                prmdtEnd_time.DbType = DbType.DateTime;
                 prmdtEnd_time.ParameterName = "@dtEnd_time";
                 prmdtEnd_time.Value = dtEnd_time;
                 prmdtEnd_time.Direction = ParameterDirection.Input;
@@ -160,7 +167,7 @@ namespace CAD.DAO
             int iRol_id,
             DateTime dtStart_time,
             DateTime dtEnd_time,
-            bool sStatus)
+            int sStatus)
         {
             List<DbParameter> lstParametros =new List<DbParameter>();
             
@@ -180,9 +187,9 @@ namespace CAD.DAO
             lstParametros.Add(prmsPerson_name);
 
             DbParameter prmsStatus = new SqlParameter();
-            prmsStatus.DbType = DbType.Binary;
+            prmsStatus.DbType = DbType.Int32;
             prmsStatus.ParameterName = "@sStatus";
-            prmsStatus.Value = sStatus;
+            prmsStatus.Value = Convert.ToInt32(sStatus);
             prmsStatus.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsStatus);
 

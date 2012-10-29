@@ -24,3 +24,16 @@ C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Sitio\bin\Instrumentaci
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Sitio\obj\Debug\ResolveAssemblyReference.cache
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Sitio\obj\Debug\Sitio.dll
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\Sitio\obj\Debug\Sitio.pdb
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\Sitio.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\Sitio.pdb
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\AjaxControlToolkit.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\Instrumentacion.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\RN.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\log4net.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\CAD.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\Instrumentacion.pdb
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\RN.pdb
+D:\u\softIII\Proyecto\Sistema\Sitio\bin\CAD.pdb
+D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\Sitio.dll
+D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\Sitio.pdb

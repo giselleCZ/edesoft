@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsProviderType
+    public class clsProviderType
     {
         #region Atributos
         private int iProviderType_id;

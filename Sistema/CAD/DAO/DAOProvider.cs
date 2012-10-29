@@ -10,7 +10,7 @@ namespace CAD.DAO
 {
     public class DAOProvider
     {
-        public int Insertar(string nombre, string apellido, int id_tipoProveedor, int telefono, string contacto_nm, string direccion, string descripcion)
+        public int Insertar(string nombre, string apellido, string correo, int id_tipoProveedor, int telefono, string contacto_nm, string direccion, string descripcion)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmA = new SqlParameter();
