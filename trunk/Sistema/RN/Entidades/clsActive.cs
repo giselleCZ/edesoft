@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsActive
+    public class clsActive
     {
         #region Atributos            
             private int iActive_id;

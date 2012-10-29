@@ -78,6 +78,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Error.aspx" />
+    <Content Include="frmResponsibles.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmResponsibles.aspx.cs">
+      <DependentUpon>frmResponsibles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmResponsibles.aspx.designer.cs">
+      <DependentUpon>frmResponsibles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

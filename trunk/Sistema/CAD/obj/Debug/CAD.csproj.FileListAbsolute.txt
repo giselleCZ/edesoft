@@ -24,3 +24,11 @@ C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\CAD\bin\Debug\Instrumen
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\CAD\obj\Debug\ResolveAssemblyReference.cache
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\CAD\obj\Debug\CAD.dll
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\CAD\obj\Debug\CAD.pdb
+D:\u\softIII\Proyecto\Sistema\CAD\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\Sistema\CAD\obj\Debug\CAD.dll
+D:\u\softIII\Proyecto\Sistema\CAD\obj\Debug\CAD.pdb
+D:\u\softIII\Proyecto\Sistema\CAD\bin\Debug\CAD.dll
+D:\u\softIII\Proyecto\Sistema\CAD\bin\Debug\CAD.pdb
+D:\u\softIII\Proyecto\Sistema\CAD\bin\Debug\Instrumentacion.dll
+D:\u\softIII\Proyecto\Sistema\CAD\bin\Debug\log4net.dll
+D:\u\softIII\Proyecto\Sistema\CAD\bin\Debug\Instrumentacion.pdb

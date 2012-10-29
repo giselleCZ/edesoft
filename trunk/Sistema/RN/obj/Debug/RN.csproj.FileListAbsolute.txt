@@ -19,3 +19,10 @@ C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\RN\bin\Debug\CAD.pdb
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\RN\obj\Debug\ResolveAssemblyReference.cache
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\RN\obj\Debug\RN.dll
 C:\Diego\TRABAJO\NUR\Diplomado Software\CAD\Arquitectura\RN\obj\Debug\RN.pdb
+D:\u\softIII\Proyecto\Sistema\RN\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\Sistema\RN\obj\Debug\RN.dll
+D:\u\softIII\Proyecto\Sistema\RN\obj\Debug\RN.pdb
+D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\RN.dll
+D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\RN.pdb
+D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\CAD.dll
+D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\CAD.pdb

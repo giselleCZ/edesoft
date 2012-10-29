@@ -5,12 +5,12 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsRol
+    public class clsRol
     {
         #region Atributos
         private int iRol_id;
         private string sRol_name;
-        private int iStatus;
+        private bool bStatus;
 
         #endregion
         #region Propiedades
@@ -21,10 +21,10 @@ namespace RN.Entidades
             set { iRol_id = value; }
         }
 
-        public int IStatus
+        public bool BStatus
         {
-            get { return iStatus; }
-            set { iStatus = value; }
+            get { return bStatus; }
+            set { bStatus = value; }
         }
 
         public string SRol_name

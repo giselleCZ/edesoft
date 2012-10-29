@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsResponsibleType
+    public class clsResponsibleType
     {
         #region Atributos
         private int iResponsibleType_id;

@@ -20,7 +20,7 @@ namespace RN.Componentes
                 throw x;
 
             DAOProvider daoProxy = new DAOProvider();
-            return daoProxy.Insertar(objProxy.SProvider_name) > 0;
+            return daoProxy.Insertar(objProxy.SProvider_name,objProxy.SProvider_lname,objProxy.SEmail,objProxy.IProviderType_id.IProviderType_id,objProxy.IPhone,objProxy.SContacto_name, objProxy.SAddress,objProxy.SProvider_desc) > 0;
         }
         public static bool ActualizarProveedor(clsProvider objProxy)
         {
@@ -37,7 +37,7 @@ namespace RN.Componentes
                 throw x;
 
             DAOProvider daoProxy = new DAOProvider();
-            return daoProxy.Actualizar(objProxy.IProvider_id, objProxy.SProvider_name);
+            return daoProxy.Actualizar(objProxy.IProvider_id, objProxy.SProvider_name,objProxy.SProvider_lname,objProxy.SEmail,objProxy.IProviderType_id.IProviderType_id,objProxy.IPhone,objProxy.SContacto_name, objProxy.SAddress,objProxy.SProvider_desc);
         }
         public static bool EliminarProveedor(int codigo)
         {
@@ -56,26 +56,19 @@ namespace RN.Componentes
         public static List<clsProvider> Traer()
         {
             DAOProvider daoProxy = new DAOProvider();
-            DataSet dtsProxy = daoProxy.TraerProveedor();
+            DataSet dtsProxy = daoProxy.TraerTodos();
 
             return CargarLista(dtsProxy.Tables[0]);
         }
         public static List<clsProvider> TraerXId(int codigo)
         {
             DAOProvider daoProxy = new DAOProvider();
-            DataSet dtsProxy = daoProxy.TraerProveedorXId(codigo);
+            DataSet dtsProxy = daoProxy.TraerXId(codigo);
 
 
             return CargarLista(dtsProxy.Tables[0]);
         }
-        public static List<clsProvider> TraerXNombre(string nombre)
-        {
-            DAOProvider daoProxy = new DAOProvider();
-            DataSet dtsProxy = daoProxy.TraerProveedorXNombre(nombre);
-
-
-            return CargarLista(dtsProxy.Tables[0]);
-        }
+       
         #endregion
         #region Metodos Privados
         private static List<clsProvider> CargarLista(DataTable tabla)

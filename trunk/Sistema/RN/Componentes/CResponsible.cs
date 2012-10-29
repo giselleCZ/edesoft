@@ -57,12 +57,12 @@ namespace RN.Componentes
 
             return LoadList(dtsProxy.Tables[0]);
         }
-        public static List<clsResponsible> SelectRow(int codigo)
+        public static clsResponsible SelectRow(int codigo)
         {
             DAOResponsible daoProxy = new DAOResponsible();
             DataSet dtsProxy = daoProxy.selectRow(codigo);
 
-            return LoadList(dtsProxy.Tables[0]);
+            return Load(dtsProxy.Tables[0].Rows[0]);
         }
 
         public static List<clsResponsible> SelectByName(string name)
@@ -109,7 +109,7 @@ namespace RN.Componentes
             objProxy.IRol_id.IRol_id = Convert.ToInt32(fila["iRol_id"]);
             objProxy.DStart_time = Convert.ToDateTime(fila["dtStart_time"]);
             objProxy.DEnd_time = Convert.ToDateTime(fila["dtEnd_time"]);
-            objProxy.BStatus = Convert.ToBoolean(fila["sStatus"]);
+            objProxy.BStatus = Convert.ToInt32(fila["sStatus"]);
             
             return objProxy;
         }

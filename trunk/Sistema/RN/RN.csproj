@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Componentes\CActive.cs" />
     <Compile Include="Componentes\CAsigResponsibleActive.cs" />
+    <Compile Include="Componentes\CRol.cs" />
     <Compile Include="Componentes\CResponsible.cs" />
     <Compile Include="Componentes\CProvider.cs" />
     <Compile Include="Componentes\CProviderType.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Entidades\clsInsurance.cs" />
     <Compile Include="Entidades\clsResponsible_type.cs" />
     <Compile Include="Entidades\clsPersonCostCenter.cs" />
-    <Compile Include="Workflows\WFactura.cs" />
     <Compile Include="Entidades\DFactura.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Componentes\CEmpleado.cs">
@@ -124,6 +124,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Workflows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

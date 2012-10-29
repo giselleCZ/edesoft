@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsSubFamily
+    public class clsSubFamily
     {
         #region Atributos
         private int iSubFamily_id;

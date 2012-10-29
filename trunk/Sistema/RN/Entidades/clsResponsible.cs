@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsResponsible
+    public class clsResponsible
     {
         #region Atributos
             private int iResponsible_id;
@@ -20,7 +20,7 @@ namespace RN.Entidades
             private string sPassword;
             private DateTime dStart_time;
             private DateTime dEnd_time;
-            private bool bStatus;
+            private int bStatus;
         #endregion
         #region Propiedades
             public int IResponsible_id
@@ -95,7 +95,7 @@ namespace RN.Entidades
                 set { dEnd_time = value; }
             }
 
-            public bool BStatus
+            public int BStatus
             {
                 get { return bStatus; }
                 set { bStatus = value; }

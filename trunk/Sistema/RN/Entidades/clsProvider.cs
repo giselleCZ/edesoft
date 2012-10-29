@@ -5,15 +5,16 @@ using System.Text;
 
 namespace RN.Entidades
 {
-    class clsProvider
+    public class clsProvider
     {
         #region Atributos
         private int iProvider_id;
         private clsProviderType iProviderType_id;
         private string sProvider_name;
-        private string sResponsible_name;
+        private string sProvider_lname;
         private string sProvider_rs;
         private string sAddress;
+        private string sContacto_name;
         private int iPhone;
         private string sEmail;
         private string sProvider_desc;
@@ -45,10 +46,10 @@ namespace RN.Entidades
             set { sProvider_rs = value; }
         }
 
-            public string SResponsible_name
+        public string SProvider_lname
             {
-                get { return sResponsible_name; }
-                set { sResponsible_name = value; }
+                get { return sProvider_lname; }
+                set { sProvider_lname = value; }
             }
 
             public string SAddress
@@ -57,6 +58,12 @@ namespace RN.Entidades
                 set { sAddress = value; }
             }
 
+
+        public string SContacto_name
+        {
+            get { return sContacto_name; }
+            set { sContacto_name = value; }
+        }
             public int IPhone
             {
                 get { return iPhone; }
