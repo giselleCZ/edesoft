@@ -184,65 +184,116 @@ SET QUOTED_IDENTIFIER OFF
 GO
 
 CREATE PROCEDURE [SEC].[Privileges_TraerXRolName]
-    @rolName		nvarchar(256)
-AS
-BEGIN
+    
+	@rolName		nvarchar(256)
+
+	AS
+
+	BEGIN
 	SELECT p.id, p.nombre, p.descripcion  
-	FROM [SEC].[RolesInPrivileges] rp JOIN [SEC].[Privileges] p ON rp.privilegeId = p.id
-	WHERE rp.roleName = @rolName;
+	
+		FROM [SEC].[RolesInPrivileges] rp 
+		JOIN [SEC].[Privileges] p ON rp.privilegeId = p.id
+	
+		WHERE rp.roleName = @rolName;
+
 END
 GO
+
 
 CREATE PROCEDURE [SEC].[Privileges_TraerXRolPrivilege]
-    @rolName		varchar(256),  
-    @privilegeName	varchar(100)
+    
+	@rolName		varchar(256),  
+    
+	@privilegeName	varchar(100)
+	
 AS
-BEGIN
-	SELECT p.id, p.nombre, p.descripcion  
-	FROM [SEC].[RolesInPrivileges] rp JOIN [SEC].[Privileges] p ON rp.privilegeId = p.id 
-	WHERE p.nombre = @privilegeName  
-	AND rp.RoleName = @rolName;
+
+	BEGIN
+	
+		SELECT p.id, p.nombre, p.descripcion  
+	
+		FROM [SEC].[RolesInPrivileges] rp 
+		JOIN [SEC].[Privileges] p ON rp.privilegeId = p.id 
+	
+		WHERE p.nombre = @privilegeName  
+	
+		AND rp.RoleName = @rolName;
+
 END
+
 GO
+
 
 CREATE PROCEDURE [SEC].[Privileges_TraerTodos]
+
 AS
+
 BEGIN
+	
 	SELECT p.id, p.nombre, p.descripcion  
+	
 	FROM [SEC].[Privileges] p;
-END
+
+	END
+
 GO
+
+
 
 CREATE PROCEDURE [SEC].[RolesInPrivileges_Insertar]
-	@id				int OUTPUT,
-	@roleName		nvarchar(256), 
+	
+	@id int OUTPUT,
+	
+	@roleName nvarchar(256),
+ 
 	@privilegeId	int 
+
 AS
+
 BEGIN
 	INSERT INTO [SEC].[RolesInPrivileges](roleName, privilegeId) 
+	
 	VALUES (@roleName, @privilegeId)
+	
 	SET @Id = SCOPE_IDENTITY() 
+
 END
 GO
+
 
 CREATE PROCEDURE [SEC].[RolesInPrivileges_EliminarXRolName]
+	
 	@roleName			nvarchar(256)
-AS
-BEGIN
-	DECLARE @number int 	
-	SET @number =	(	SELECT count(*) 
-						FROM [SEC].[RolesInPrivileges] rp 
-						WHERE rp.roleName = @roleName
-					)
 
-	DELETE FROM [SEC].[RolesInPrivileges]
-	WHERE roleName = @roleName
-	RETURN @number
+AS
+
+BEGIN
+	
+	DECLARE @number int 	
+	
+	SET @number =(SELECT count(*)
+		      FROM [SEC].[RolesInPrivileges] rp 
+
+		      WHERE rp.roleName = @roleName
+)
+
+	
+		      DELETE FROM [SEC].[RolesInPrivileges]
+	
+			     WHERE roleName = @roleName
+	
+		      RETURN @number
+
 END
 GO
 
+
+
 CREATE PROCEDURE [vip].[Empresa_Insertar]
+	
 	@id				int OUTPUT,
+	
 	@nombre	varchar(100),
 	@descripcion	varchar(250),
 	@nombrePersonaContacto	varchar(100),
@@ -253,10 +304,12 @@ CREATE PROCEDURE [vip].[Empresa_Insertar]
 	@estado	bit,
 	@usuarioId	uniqueidentifier,
 	@fecha	datetime
+
 AS
 BEGIN
 	INSERT INTO [vip].[Empresa](nombre, descripcion, nombrePersonaContacto, telefono, correo, direccion, fechaRegistro, estado, usuarioId, fecha) 
-	VALUES (@nombre, @descripcion, @nombrePersonaContacto, @telefono, @correo, @direccion, @fechaRegistro, @estado, @usuarioId, @fecha) 
+	
+VALUES (@nombre, @descripcion, @nombrePersonaContacto, @telefono, @correo, @direccion, @fechaRegistro, @estado, @usuarioId, @fecha) 
 	SET @Id = SCOPE_IDENTITY() 
 END
 GO
