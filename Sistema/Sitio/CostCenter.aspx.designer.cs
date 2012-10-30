@@ -22,15 +22,6 @@ namespace Sitio {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
         /// Control btNuevo.
         /// </summary>
         /// <remarks>
@@ -40,13 +31,13 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.Button btNuevo;
         
         /// <summary>
-        /// Control btModificar.
+        /// Control btBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btModificar;
+        protected global::System.Web.UI.WebControls.Button btBuscar;
         
         /// <summary>
         /// Control btEliminar.
@@ -56,6 +47,15 @@ namespace Sitio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btEliminar;
+        
+        /// <summary>
+        /// Control pnlNuevo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlNuevo;
         
         /// <summary>
         /// Control lbNombre.
@@ -121,21 +121,21 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.Button btguardar;
         
         /// <summary>
-        /// Control Panel2.
+        /// Control pnlBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Panel pnlBuscar;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control grdCentroCosto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grdCentroCosto;
     }
 }

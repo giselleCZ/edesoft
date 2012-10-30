@@ -8,7 +8,7 @@ namespace CAD.DAO
 {
    public class DAOCostCenter
     {
-    public int Insert(string sCostCente_name, string sCostCenter_desc, int iCostCenter_gestion)
+    public int Insert(string sCostCenter_name, string sCostCenter_desc, int iCostCenter_gestion)
             {
               List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmCC = new SqlParameter();
@@ -17,12 +17,12 @@ namespace CAD.DAO
             prmCC.Direction = ParameterDirection.Output;
             lstParametros.Add(prmCC);
 
-            DbParameter prmsCostCente_name = new SqlParameter();
-            prmsCostCente_name.DbType = DbType.String;
-            prmsCostCente_name.ParameterName = "@sCostCente_name";
-            prmsCostCente_name.Value = sCostCente_name;
-            prmsCostCente_name.Direction = ParameterDirection.Input;
-            lstParametros.Add(prmsCostCente_name);
+            DbParameter prmsCostCenter_name = new SqlParameter();
+            prmsCostCenter_name.DbType = DbType.String;
+            prmsCostCenter_name.ParameterName = "@sCostCenter_name";
+            prmsCostCenter_name.Value = sCostCenter_name;
+            prmsCostCenter_name.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmsCostCenter_name);
             
             DbParameter prmsCostCenter_desc = new SqlParameter();
             prmsCostCenter_desc.DbType = DbType.String;
@@ -47,7 +47,7 @@ namespace CAD.DAO
             return -1;
 
         }
-        public bool Update(int iCostCenter_id, string sCostCente_name, string sCostCenter_desc, int iCostCenter_gestion)
+        public bool Update(int iCostCenter_id, string sCostCenter_name, string sCostCenter_desc, int iCostCenter_gestion)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmCC = new SqlParameter();
@@ -56,12 +56,12 @@ namespace CAD.DAO
             prmCC.Direction = ParameterDirection.Output;
             lstParametros.Add(prmCC);
 
-            DbParameter prmsCostCente_name = new SqlParameter();
-            prmsCostCente_name.DbType = DbType.String;
-            prmsCostCente_name.ParameterName = "@sCostCente_name";
-            prmsCostCente_name.Value = sCostCente_name;
-            prmsCostCente_name.Direction = ParameterDirection.Input;
-            lstParametros.Add(prmsCostCente_name);
+            DbParameter prmsCostCenter_name = new SqlParameter();
+            prmsCostCenter_name.DbType = DbType.String;
+            prmsCostCenter_name.ParameterName = "@sCostCenter_name";
+            prmsCostCenter_name.Value = sCostCenter_name;
+            prmsCostCenter_name.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmsCostCenter_name);
             
             DbParameter prmsCostCenter_desc = new SqlParameter();
             prmsCostCenter_desc.DbType = DbType.String;
