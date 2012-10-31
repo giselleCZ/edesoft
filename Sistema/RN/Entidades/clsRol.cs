@@ -10,7 +10,7 @@ namespace RN.Entidades
         #region Atributos
         private int iRol_id;
         private string sRol_name;
-        private bool bStatus;
+        private int bStatus;
 
         #endregion
         #region Propiedades
@@ -21,7 +21,7 @@ namespace RN.Entidades
             set { iRol_id = value; }
         }
 
-        public bool BStatus
+        public int sStatus
         {
             get { return bStatus; }
             set { bStatus = value; }

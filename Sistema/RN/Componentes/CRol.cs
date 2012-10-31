@@ -10,7 +10,7 @@ namespace RN.Componentes
     {
 
         #region DMLS
-        public static bool Insertar(clsRol objProxy)
+        public static int Insert(clsRol objProxy)
         {
             ValidationException x = new ValidationException();
             if (string.IsNullOrEmpty(objProxy.SRol_name))
@@ -20,7 +20,7 @@ namespace RN.Componentes
                 throw x;
 
             DAORol daoProxy = new DAORol();
-            return daoProxy.Insert(objProxy.SRol_name,objProxy.BStatus) > 0;
+            return daoProxy.Insert(objProxy.SRol_name,objProxy.sStatus);
         }
         public static bool Update(clsRol objProxy)
         {
@@ -35,7 +35,7 @@ namespace RN.Componentes
                 throw x;
 
             DAORol daoProxy = new DAORol();
-            return daoProxy.Update(objProxy.IRol_id,objProxy.SRol_name, objProxy.BStatus);
+            return daoProxy.Update(objProxy.IRol_id,objProxy.SRol_name, objProxy.sStatus);
         }
         public static bool Delete(int iRol_id)
         {
@@ -82,7 +82,7 @@ namespace RN.Componentes
             clsRol objProxy = new clsRol();
             objProxy.IRol_id = Convert.ToInt32(fila["iRol_id"]);
             objProxy.SRol_name = fila["sRol_name"].ToString();
-            objProxy.BStatus = Convert.ToBoolean(fila["bStatus"]);
+            objProxy.sStatus = Convert.ToInt32(fila["bStatus"]);
             return objProxy;
         }
         #endregion

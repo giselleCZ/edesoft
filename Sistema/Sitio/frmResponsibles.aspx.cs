@@ -15,7 +15,10 @@ namespace Sitio
         {
             if (!IsPostBack)
             {
+
+                pnlBuscar.Visible = false;
                 loadRoles();
+                LoadResponsibles();
             }
         }
         public void LoadResponsibles()
@@ -32,21 +35,61 @@ namespace Sitio
             ddlRol.DataValueField = "IRol_id";
             ddlRol.DataBind();
         }
-        public void loadRoles(int iRol_id)
+        public void loadRol(int iRol_id)
         {
             List<clsRol> objRol = CRol.SelectAll();
             ddlRol.DataSource = objRol;
             ddlRol.DataTextField = "SRol_name";
             ddlRol.DataValueField = "IRol_id";
-            ddlRol.SelectedValue = getRol(iRol_id);
+            SetDDLs(ddlRol, getRol(iRol_id));
+            //ddlRol.SelectedValue = getSelectedRol(iRol_id);
             ddlRol.DataBind();
+        }
+
+        private void SetDDLs(DropDownList d, string val)
+        {
+            ListItem li;
+            for (int i = 0; i < d.Items.Count; i++)
+            {
+                li = d.Items[i];
+                if (li.Value == val)
+                {
+                    d.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+        public string timeToString(DateTime d){
+            string dia = d.Day.ToString();
+            string mes = d.Month.ToString();
+            string anio = d.Year.ToString();
+            return dia + "-" + mes + "-" + anio;
+        }
+        public string getSelectedRol(int irol)
+        {
+            RN.Entidades.clsRol rol = CRol.SelectRow(irol);
+            return rol.SRol_name;
+
         }
         public string getRol(object objResponsible)
         {
-            int iRol_id = Convert.ToInt32(DataBinder.Eval(objResponsible, "iRol_id"));
-            RN.Entidades.clsRol rol = CRol.SelectRow(iRol_id);
+            int iResp= Convert.ToInt32(DataBinder.Eval(objResponsible,"iResponsible_id"));
+            clsResponsible resp= CResponsible.SelectRow(iResp);
+            int iRol = resp.IRol_id.IRol_id;
+            RN.Entidades.clsRol rol = CRol.SelectRow(iRol);
             return rol.SRol_name;
         }
+        public string getRol(int iRol)
+        {
+            RN.Entidades.clsRol rol = CRol.SelectRow(iRol);
+            return rol.SRol_name;
+        }
+        /*public string getRol(clsRol objResponsible)    
+        {
+            int iRol = objResponsible.IRol_id;
+            RN.Entidades.clsRol rol = CRol.SelectRow(iRol);
+            return rol.SRol_name;
+        }*/
 
         protected void ResultGrid_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -54,6 +97,7 @@ namespace Sitio
             if (e.CommandName == "Editar")
             {
                 clsResponsible Responsible = CResponsible.SelectRow(iResponsible_id);
+                txtCodigo.Text = Responsible.IResponsible_id.ToString();
                 txtCi.Text = Responsible.SPerson_dni;
                 txtFName.Text = Responsible.SPerson_name;
                 txtLName.Text = Responsible.SPerson_lname;
@@ -61,15 +105,19 @@ namespace Sitio
                 txtEmail.Text = Responsible.SPerson_email;
                 txtUsername.Text = Responsible.SUsername;
                 txtPassword.Text = Responsible.SPassword;
-                txtStartdate.Text = Responsible.DStart_time.ToString();
-                txtEnddate.Text = Responsible.DEnd_time.ToString();
-                loadRoles(Responsible.IRol_id.IRol_id);
+                txtStartdate.Text = timeToString(Responsible.DStart_time);
+                txtEnddate.Text = timeToString(Responsible.DEnd_time);
+                loadRol(Responsible.IRol_id.IRol_id);
+
+                pnlNuevo.Visible = true;
+                grdResponsibles.Enabled = false;
             }
             else
             {
                 if (e.CommandName == "Eliminar")
                 {
                     CResponsible.Delete(iResponsible_id);
+                    LoadResponsibles();
                 }
             }
         }
@@ -78,6 +126,20 @@ namespace Sitio
         {
             pnlNuevo.Visible = true;
             pnlBuscar.Visible = false;
+            
+            txtCodigo.Text ="";
+            txtCi.Text = "";
+            txtFName.Text = "";
+            txtLName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtStartdate.Text = "";
+            txtEnddate.Text = "";
+            loadRoles();
+            pnlNuevo.Visible = true;
+            grdResponsibles.Enabled = false;
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -114,12 +176,16 @@ namespace Sitio
             {
                 int iResponsible_id = CResponsible.Insert(Responsible);
                 txtCodigo.Text = iResponsible_id.ToString();
+                pnlBuscar.Visible = true;
+                LoadResponsibles();
+                grdResponsibles.Enabled = true;
 
             }
             else
             {
                 Responsible.IResponsible_id = Convert.ToInt32(txtCodigo.Text);
                 CResponsible.Update(Responsible);
+                LoadResponsibles();
             }
         }
     }

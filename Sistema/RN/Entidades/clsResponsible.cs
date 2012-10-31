@@ -20,7 +20,7 @@ namespace RN.Entidades
             private string sPassword;
             private DateTime dStart_time;
             private DateTime dEnd_time;
-            private int bStatus;
+            private int sStatus;
         #endregion
         #region Propiedades
             public int IResponsible_id
@@ -95,10 +95,10 @@ namespace RN.Entidades
                 set { dEnd_time = value; }
             }
 
-            public int BStatus
+            public int SStatus
             {
-                get { return bStatus; }
-                set { bStatus = value; }
+                get { return sStatus; }
+                set { sStatus = value; }
             }
 
 

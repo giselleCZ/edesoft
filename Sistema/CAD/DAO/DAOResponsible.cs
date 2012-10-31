@@ -77,6 +77,13 @@ namespace CAD.DAO
                 prmsUsername.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsUsername);
 
+                DbParameter prmsPassword = new SqlParameter();
+                prmsPassword.DbType = DbType.String;
+                prmsPassword.ParameterName = "@sPassword";
+                prmsPassword.Value = sPassword;
+                prmsPassword.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsPassword);
+
                 DbParameter prmiRol_id = new SqlParameter();
                 prmiRol_id.DbType = DbType.Int32;
                 prmiRol_id.ParameterName = "@iRol_id";
@@ -141,7 +148,7 @@ namespace CAD.DAO
 
             DbParameter prmId = new SqlParameter();
             prmId.DbType = DbType.Int32;
-            prmId.ParameterName = "@iResponsible_id";
+            prmId.ParameterName = "@iPerson_id";
             prmId.Value = codigo;
             prmId.Direction = ParameterDirection.Input;
             lstParametros.Add(prmId);
@@ -152,8 +159,9 @@ namespace CAD.DAO
 
         public DataSet selectAll()
         {
+            List<DbParameter> lstParametros = new List<DbParameter>();
             SQLConexion conProxy = new SQLConexion();
-            return conProxy.EjecutarConsulta(null, "dbo.sp_tblResponsibles_SelectAll");
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblResponsibles_SelectAll");
         }
 
         public bool Update(int iResponsible_id,
@@ -173,11 +181,17 @@ namespace CAD.DAO
             
             DbParameter prmId= new SqlParameter();
             prmId.DbType= DbType.Int32;
-            prmId.ParameterName = "@iResponsible_id";
+            prmId.ParameterName = "@iPerson_id";
             prmId.Value= iResponsible_id;
             prmId.Direction=ParameterDirection.Input;
             lstParametros.Add(prmId);
 
+            DbParameter prmsPerson_lname = new SqlParameter();
+            prmsPerson_lname.DbType = DbType.String;
+            prmsPerson_lname.ParameterName = "@sPerson_lname";
+            prmsPerson_lname.Value = sPerson_lname;
+            prmsPerson_lname.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmsPerson_lname);
 
             DbParameter prmsPerson_name = new SqlParameter();
             prmsPerson_name.DbType = DbType.String;
@@ -214,6 +228,13 @@ namespace CAD.DAO
             prmsPerson_email.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsPerson_email);
 
+            DbParameter prmsPassword = new SqlParameter();
+            prmsPassword.DbType = DbType.String;
+            prmsPassword.ParameterName = "@sPassword";
+            prmsPassword.Value = sPassword;
+            prmsPassword.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmsPassword);
+
             DbParameter prmsUsername = new SqlParameter();
             prmsUsername.DbType = DbType.String;
             prmsUsername.ParameterName = "@sUsername";
@@ -236,7 +257,7 @@ namespace CAD.DAO
             lstParametros.Add(prmdtStart_time);
 
             DbParameter prmdtEnd_time = new SqlParameter();
-            prmdtEnd_time.DbType = DbType.Int32;
+            prmdtEnd_time.DbType = DbType.DateTime;
             prmdtEnd_time.ParameterName = "@dtEnd_time";
             prmdtEnd_time.Value = dtEnd_time;
             prmdtEnd_time.Direction = ParameterDirection.Input;
@@ -252,7 +273,7 @@ namespace CAD.DAO
 
             DbParameter prmId = new SqlParameter();
             prmId.DbType = DbType.Int32;
-            prmId.ParameterName = "@iResponsibles_id";
+            prmId.ParameterName = "@iPerson_id";
             prmId.Value = codigo;
             prmId.Direction = ParameterDirection.Input;
             lstParametros.Add(prmId);
