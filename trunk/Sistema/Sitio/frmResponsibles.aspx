@@ -6,6 +6,13 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+        div {
+        background-color:#D5EDEF;
+        color:#4f6b72;
+        width:50px;
+        border: 1px solid #C1DAD7;
+ 
+      }
         .style1
         {
             width: 358px;
@@ -155,7 +162,7 @@
                     <asp:TemplateField HeaderText="Eliminar">            
 			            <ItemStyle HorizontalAlign="Center"></ItemStyle>
 			            <ItemTemplate>
-                            <asp:ImageButton AlternateText='<%# DataBinder.Eval(Container.DataItem,"iResponsible_id") %>' CommandName="Eliminar" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"iResponsible_id") %>' runat="server" ID="Delete" ImageUrl='Images/delete.png' />
+                            <asp:ImageButton CommandName="Eliminar" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"iResponsible_id") %>' runat="server" ID="Delete" ImageUrl='Images/delete.png' />
 			            </ItemTemplate>
 		            </asp:TemplateField>
                     <asp:TemplateField HeaderText="Editar">            
@@ -170,7 +177,7 @@
                     <asp:TemplateField HeaderText="Rol">            
 			            <ItemStyle HorizontalAlign="Center"></ItemStyle>
 			            <ItemTemplate>
-                            <asp:Label CommandName="Rol" CommandArgument='<%# getRol(Container.DataItem) %>' runat="server" ID="iRol_id">
+                            <asp:Label  Text='<%# getRol(Container.DataItem) %>' runat="server" ID="lbliRol_id">
                             </asp:Label>
 			            </ItemTemplate>
 		            </asp:TemplateField>
@@ -178,8 +185,8 @@
                     <asp:BoundField DataField="sPerson_email" HeaderText="Email"/>
                     <asp:BoundField DataField="sUsername" HeaderText="Usuario"/>
                     <asp:BoundField DataField="sPassword" HeaderText="Contraseña"/>
-                    <asp:BoundField DataField="dtStart_time" HeaderText="F. Inicio"/>
-                    <asp:BoundField DataField="dtEnd_time" HeaderText="F. Fin"/>
+                    <asp:BoundField DataField="dStart_time" HeaderText="F. Inicio"/>
+                    <asp:BoundField DataField="dEnd_time" HeaderText="F. Fin"/>
                 </Columns>
             </asp:GridView>
             </strong><br />

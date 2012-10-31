@@ -10,12 +10,12 @@ namespace CAD.DAO
 {
     public class DAORol
     {
-        public int Insert(string sRol_name, bool bStatus)
+        public int Insert(string sRol_name, int sStatus)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmA = new SqlParameter();
             prmA.DbType = DbType.Int32;
-            prmA.ParameterName = "@iRol_id";
+            prmA.ParameterName = "@id";
             prmA.Direction = ParameterDirection.Output;
             lstParametros.Add(prmA);
 
@@ -26,12 +26,12 @@ namespace CAD.DAO
             prmsRol_name.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsRol_name);
             
-            DbParameter prmbStatus = new SqlParameter();
-            prmbStatus.DbType = DbType.Boolean;
-            prmbStatus.ParameterName = "@bStatus";
-            prmbStatus.Value = bStatus;
-            prmbStatus.Direction = ParameterDirection.Input;
-            lstParametros.Add(prmbStatus);
+            DbParameter prmsStatus = new SqlParameter();
+            prmsStatus.DbType = DbType.Int32;
+            prmsStatus.ParameterName = "@sStatus";
+            prmsStatus.Value = sStatus;
+            prmsStatus.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmsStatus);
 
 
             SQLConexion conProxy = new SQLConexion();
@@ -40,12 +40,13 @@ namespace CAD.DAO
             return -1;
 
         }
-        public bool Update(int iRol_id, string sRol_name, bool bStatus)
+        public bool Update(int iRol_id, string sRol_name, int sStatus)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmA = new SqlParameter();
             prmA.DbType = DbType.Int32;
             prmA.ParameterName = "@iRol_id";
+            prmA.Value = iRol_id;
             prmA.Direction = ParameterDirection.Input;
             lstParametros.Add(prmA);
 
@@ -57,9 +58,9 @@ namespace CAD.DAO
             lstParametros.Add(prmsRol_name);
 
             DbParameter prmbStatus = new SqlParameter();
-            prmbStatus.DbType = DbType.Boolean;
-            prmbStatus.ParameterName = "@bStatus";
-            prmbStatus.Value = bStatus;
+            prmbStatus.DbType = DbType.Int32;
+            prmbStatus.ParameterName = "@sStatus";
+            prmbStatus.Value = sStatus;
             prmbStatus.Direction = ParameterDirection.Input;
             lstParametros.Add(prmbStatus);
 

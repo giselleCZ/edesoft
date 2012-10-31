@@ -62,6 +62,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Default\index.css" />
     <Content Include="Consultar.asmx" />
+    <Content Include="frmRols.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="App_Themes\Default\index.skin" />
     <None Include="Properties\Settings.settings">
@@ -103,6 +104,13 @@
     <Compile Include="Consultar.asmx.cs">
       <DependentUpon>Consultar.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmRols.aspx.cs">
+      <DependentUpon>frmRols.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRols.aspx.designer.cs">
+      <DependentUpon>frmRols.aspx</DependentUpon>
     </Compile>
     <Compile Include="ctrLenguaje.ascx.cs">
       <DependentUpon>ctrLenguaje.ascx</DependentUpon>

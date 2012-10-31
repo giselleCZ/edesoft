@@ -14,12 +14,17 @@ namespace RN.Componentes
             ValidationException x = new ValidationException();
             if (string.IsNullOrEmpty(objProxy.SPerson_name)&& string.IsNullOrEmpty(objProxy.SPerson_lname))
                 x.AgregarError("verifique el nombre del y el apellido de la persona");
-
+            if (objProxy.DEnd_time <= objProxy.DStart_time)
+                x.AgregarError("La fecha de fin deber ser mayor a la fecha de inicio");
+            if (string.IsNullOrEmpty(objProxy.SUsername))
+                x.AgregarError("Ingrese un nombre de usuario");
+            if (string.IsNullOrEmpty(objProxy.SPassword))
+                x.AgregarError("Ingrese una contrasenia");
             if (x.Cantidad > 0)
                 throw x;
 
             DAOResponsible daoProxy = new DAOResponsible();
-            return daoProxy.Insert(objProxy.SPerson_name, objProxy.SPerson_lname,objProxy.SPerson_dni,objProxy.SPerson_phone, objProxy.SPerson_email,objProxy.SUsername,objProxy.SPassword,objProxy.IRol_id.IRol_id,objProxy.DStart_time, objProxy.DEnd_time,objProxy.BStatus);
+            return daoProxy.Insert(objProxy.SPerson_name, objProxy.SPerson_lname,objProxy.SPerson_dni,objProxy.SPerson_phone, objProxy.SPerson_email,objProxy.SUsername,objProxy.SPassword,objProxy.IRol_id.IRol_id,objProxy.DStart_time, objProxy.DEnd_time,objProxy.SStatus);
         }
         public static bool Update(clsResponsible objProxy)
         {
@@ -34,7 +39,7 @@ namespace RN.Componentes
                 throw x;
 
             DAOResponsible daoProxy = new DAOResponsible();
-            return daoProxy.Update(objProxy.IResponsible_id, objProxy.SPerson_name, objProxy.SPerson_lname, objProxy.SPerson_dni, objProxy.SPerson_phone, objProxy.SPerson_email, objProxy.SUsername, objProxy.SPassword, objProxy.IRol_id.IRol_id, objProxy.DStart_time, objProxy.DEnd_time, objProxy.BStatus);
+            return daoProxy.Update(objProxy.IResponsible_id, objProxy.SPerson_name, objProxy.SPerson_lname, objProxy.SPerson_dni, objProxy.SPerson_phone, objProxy.SPerson_email, objProxy.SUsername, objProxy.SPassword, objProxy.IRol_id.IRol_id, objProxy.DStart_time, objProxy.DEnd_time, objProxy.SStatus);
         }
         public static bool Delete(int iResponsible_id)
         {
@@ -98,7 +103,7 @@ namespace RN.Componentes
         {
             clsResponsible objProxy = new clsResponsible();
 
-            objProxy.IResponsible_id = Convert.ToInt32(fila["iResponsible_id"]);
+            objProxy.IResponsible_id = Convert.ToInt32(fila["iPerson_id"]);
             objProxy.SPerson_name = fila["sPerson_name"].ToString();
             objProxy.SPerson_lname = fila["sPerson_lname"].ToString();
             objProxy.SPerson_dni = fila["sPerson_dni"].ToString();
@@ -106,10 +111,12 @@ namespace RN.Componentes
             objProxy.SPerson_email = fila["sPerson_email"].ToString();
             objProxy.SUsername = fila["sUsername"].ToString();
             objProxy.SPassword = fila["sPassword"].ToString();
-            objProxy.IRol_id.IRol_id = Convert.ToInt32(fila["iRol_id"]);
+            clsRol rol = CRol.SelectRow(Convert.ToInt32(fila["iRol_id"]));
+            objProxy.IRol_id = rol;
+            //objProxy.IRol_id.IRol_id = Convert.ToInt32(fila["iRol_id"]);
             objProxy.DStart_time = Convert.ToDateTime(fila["dtStart_time"]);
             objProxy.DEnd_time = Convert.ToDateTime(fila["dtEnd_time"]);
-            objProxy.BStatus = Convert.ToInt32(fila["sStatus"]);
+            objProxy.SStatus = Convert.ToInt32(fila["sStatus"]);
             
             return objProxy;
         }
