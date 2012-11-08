@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Componentes\CActive.cs" />
     <Compile Include="Componentes\CAsigResponsibleActive.cs" />
+    <Compile Include="Componentes\CFamilies.cs" />
     <Compile Include="Componentes\CRol.cs" />
     <Compile Include="Componentes\CResponsible.cs" />
     <Compile Include="Componentes\CProvider.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Entidades\clsCostCenter.cs" />
     <Compile Include="Entidades\clsLocation.cs" />
     <Compile Include="Entidades\clsRevalue.cs" />
-    <Compile Include="Entidades\clsFamily.cs" />
+    <Compile Include="Entidades\clsFamilies.cs" />
     <Compile Include="Entidades\clsResponsible.cs" />
     <Compile Include="Entidades\clsAsigResponsibleActive.cs" />
     <Compile Include="Entidades\clsActive.cs" />

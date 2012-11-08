@@ -62,6 +62,8 @@
   <ItemGroup>
     <Content Include="App_Themes\Default\index.css" />
     <Content Include="Consultar.asmx" />
+    <Content Include="frmFamilies.aspx" />
+    <Content Include="css\menunew.css" />
     <Content Include="frmRols.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="App_Themes\Default\index.skin" />
@@ -81,6 +83,7 @@
     <Content Include="Error.aspx" />
     <Content Include="frmResponsibles.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="inicio.htm" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -104,6 +107,13 @@
     <Compile Include="Consultar.asmx.cs">
       <DependentUpon>Consultar.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmFamilies.aspx.cs">
+      <DependentUpon>frmFamilies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmFamilies.aspx.designer.cs">
+      <DependentUpon>frmFamilies.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmRols.aspx.cs">
       <DependentUpon>frmRols.aspx</DependentUpon>
