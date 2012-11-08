@@ -9,7 +9,7 @@ namespace RN.Entidades
     {
         #region Atributos
         private int iSubFamily_id;
-        private clsFamily iFamily_id;
+        private clsFamilies iFamily_id;
         private string sSubFamily_name;
         private string sSubFamily_desc;
 
@@ -20,7 +20,7 @@ namespace RN.Entidades
                 get { return iSubFamily_id; }
                 set { iSubFamily_id = value; }
             }
-            public clsFamily IFamily_id1
+            public clsFamilies IFamily_id1
             {
                 get { return iFamily_id; }
                 set { iFamily_id = value; }
