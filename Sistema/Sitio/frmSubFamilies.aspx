@@ -31,7 +31,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <strong>Administración de Responsables</strong> <br />
+            <strong>Administración de Sub Familias</strong> <br />
             <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" 
             onclick="btnNuevo_Click" />
 &nbsp;&nbsp;
@@ -109,15 +109,15 @@
                             <asp:ImageButton CommandName="Editar" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"iSubFamily_id") %>' runat="server" ID="Edit" ImageUrl='Images/edit.png' />
 			            </ItemTemplate>
 		            </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Rol">            
+                    <asp:TemplateField HeaderText="Familia">            
 			            <ItemStyle HorizontalAlign="Center"></ItemStyle>
 			            <ItemTemplate>
                             <asp:Label  Text='<%# getFamily(Container.DataItem) %>' runat="server" ID="lbliFamily_id">
                             </asp:Label>
 			            </ItemTemplate>
 		            </asp:TemplateField>
-                    <asp:BoundField DataField="sSubFamily_name" HeaderText="Nombre" />
-                    <asp:BoundField DataField="sSubFamily_desc" HeaderText="Apellidos" />
+                    <asp:BoundField DataField="sSubFamily_name" HeaderText="Sub Familia" />
+                    <asp:BoundField DataField="sSubFamily_desc" HeaderText="Descripcion" />
                 </Columns>
             </asp:GridView>
             </strong><br />
