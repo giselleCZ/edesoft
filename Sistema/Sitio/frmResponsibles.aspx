@@ -5,14 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/funciones.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/menunew.css" />
     <style type="text/css">
-        div {
-        background-color:#D5EDEF;
-        color:#4f6b72;
-        width:50px;
-        border: 1px solid #C1DAD7;
- 
-      }
         .style1
         {
             width: 358px;
@@ -26,6 +22,11 @@
             width: 134px;
         }
     </style>
+    <script type="text/javascript">
+        $("#txtEnddate").datepicker({
+			inline: true
+		});
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -142,7 +143,7 @@
                     <td class="style3">
                         &nbsp;</td>
                     <td>
-                        <asp:Button ID="btnGuardar" runat="server" onclick="btnGuardar_Click" 
+                        <asp:Button ID="btnGuardarResponsibles" runat="server" onclick="btnGuardarResponsibles_Click" 
                             Text="Guardar" />
                     </td>
                     <td>

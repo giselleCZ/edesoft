@@ -10,7 +10,7 @@
 namespace Sitio {
     
     
-    public partial class frmResponsibles {
+    public partial class frmSubFamilies {
         
         /// <summary>
         /// Control form1.
@@ -58,103 +58,40 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.TextBox txtCodigo;
         
         /// <summary>
-        /// Control txtCi.
+        /// Control ddlFamily.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCi;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFamily;
         
         /// <summary>
-        /// Control txtFName.
+        /// Control txtSubfamily_name.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFName;
+        protected global::System.Web.UI.WebControls.TextBox txtSubfamily_name;
         
         /// <summary>
-        /// Control txtLName.
+        /// Control txtSubfamily_desc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLName;
+        protected global::System.Web.UI.WebControls.TextBox txtSubfamily_desc;
         
         /// <summary>
-        /// Control txtPhone.
+        /// Control btnGuardarSFamily.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
-        
-        /// <summary>
-        /// Control txtEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
-        /// <summary>
-        /// Control txtUsername.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
-        
-        /// <summary>
-        /// Control txtPassword.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
-        /// <summary>
-        /// Control txtStartdate.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStartdate;
-        
-        /// <summary>
-        /// Control txtEnddate.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEnddate;
-        
-        /// <summary>
-        /// Control ddlRol.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRol;
-        
-        /// <summary>
-        /// Control btnGuardarResponsibles.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarResponsibles;
+        protected global::System.Web.UI.WebControls.Button btnGuardarSFamily;
         
         /// <summary>
         /// Control pnlBuscar.
@@ -166,12 +103,12 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.Panel pnlBuscar;
         
         /// <summary>
-        /// Control grdResponsibles.
+        /// Control grdSubFamilies.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdResponsibles;
+        protected global::System.Web.UI.WebControls.GridView grdSubFamilies;
     }
 }

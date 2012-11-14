@@ -76,7 +76,7 @@ namespace Sitio
             pnlBuscar.Visible = true;
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected void btnGuardarRols_Click(object sender, EventArgs e)
         {
             clsRol rol = new clsRol();
             rol.SRol_name = txtRol.Text;

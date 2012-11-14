@@ -67,13 +67,13 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.TextBox txtRol;
         
         /// <summary>
-        /// Control btnGuardar.
+        /// Control btnGuardarRols.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Button btnGuardarRols;
         
         /// <summary>
         /// Control pnlBuscar.

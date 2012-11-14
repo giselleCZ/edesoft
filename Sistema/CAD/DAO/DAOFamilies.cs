@@ -12,7 +12,7 @@ namespace CAD.DAO
             List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmiFamily_id = new SqlParameter();
             prmiFamily_id.DbType = DbType.Int32;
-            prmiFamily_id.ParameterName = "@iFamily_id";
+            prmiFamily_id.ParameterName = "@id";
             prmiFamily_id.Direction = ParameterDirection.Output;
             lstParametros.Add(prmiFamily_id);
 
@@ -30,6 +30,13 @@ namespace CAD.DAO
             prmsFamily_desc.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsFamily_desc);
 
+            DbParameter prmiDepreciation = new SqlParameter();
+            prmiDepreciation.DbType = DbType.String;
+            prmiDepreciation.ParameterName = "@iDepreciation_time";
+            prmiDepreciation.Value = iDepreciation_time;
+            prmiDepreciation.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmiDepreciation);
+
             SQLConexion conProxy = new SQLConexion();
             if (conProxy.EjecutarDML(lstParametros, "dbo.sp_tblFamilies_Insert"))
                 return Convert.ToInt32(prmiFamily_id.Value);
@@ -42,6 +49,7 @@ namespace CAD.DAO
             DbParameter prmiFamily_id = new SqlParameter();
             prmiFamily_id.DbType = DbType.Int32;
             prmiFamily_id.ParameterName = "@iFamily_id";
+            prmiFamily_id.Value = iFamily_id;
             prmiFamily_id.Direction = ParameterDirection.Input;
             lstParametros.Add(prmiFamily_id);
 
@@ -58,6 +66,13 @@ namespace CAD.DAO
             prmsFamily_desc.Value = sFamily_desc;
             prmsFamily_desc.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsFamily_desc);
+
+            DbParameter prmiDepreciation = new SqlParameter();
+            prmiDepreciation.DbType = DbType.String;
+            prmiDepreciation.ParameterName = "@iDepreciation_time";
+            prmiDepreciation.Value = iDepreciation_time;
+            prmiDepreciation.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmiDepreciation);
 
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarDML(lstParametros, "dbo.sp_tblFamilies_Update");
@@ -98,6 +113,20 @@ namespace CAD.DAO
 
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblFamilies_SelectRow");
+        }
+        public DataSet SelectByName(string iFamily_name)
+        {
+            List<DbParameter> lstParametros = new List<DbParameter>();
+
+            DbParameter prmiFamily_id = new SqlParameter();
+            prmiFamily_id.DbType = DbType.String;
+            prmiFamily_id.ParameterName = "@iFamily_name";
+            prmiFamily_id.Value = iFamily_name;
+            prmiFamily_id.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmiFamily_id);
+
+            SQLConexion conProxy = new SQLConexion();
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblFamilies_SelectByName");
         }
     }
 }
