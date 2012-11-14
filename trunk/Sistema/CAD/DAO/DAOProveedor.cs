@@ -24,8 +24,6 @@ namespace CAD.DAO
             prmB.Direction = ParameterDirection.Input;
             lstParametros.Add(prmB);
 
- 
-
             DbParameter prmD = new SqlParameter();
             prmD.DbType = DbType.String;
             prmD.ParameterName = "@sProvider_rs";
@@ -62,6 +60,7 @@ namespace CAD.DAO
             lstParametros.Add(prmH);
 
             SQLConexion conProxy = new SQLConexion();
+
             if (conProxy.EjecutarDML(lstParametros, "dbo.sp_tblProviders_Insert"))
                 return Convert.ToInt32(prmA.Value);
             return -1;
@@ -131,7 +130,7 @@ namespace CAD.DAO
             prmA.DbType = DbType.Int32;
             prmA.ParameterName = "@iProvider_id";
             prmA.Value = codigo;
-            prmA.Direction = ParameterDirection.Output;
+            prmA.Direction = ParameterDirection.Input;
             lstParametros.Add(prmA);
 
             DbParameter prmB = new SqlParameter();
@@ -140,8 +139,6 @@ namespace CAD.DAO
             prmB.Value = nm;
             prmB.Direction = ParameterDirection.Input;
             lstParametros.Add(prmB);
-
-
 
             DbParameter prmD = new SqlParameter();
             prmD.DbType = DbType.String;
@@ -181,6 +178,7 @@ namespace CAD.DAO
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarDML(lstParametros, "dbo.sp_tblProviders_Update");
         }
+
         public bool Eliminar(int codigo)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
@@ -196,17 +194,15 @@ namespace CAD.DAO
             return conProxy.EjecutarDML(lstParametros, "dbo.sp_tblProviders_DeleteRow");
         }
 
-        public DataSet TraerProveedor()
+        public DataSet TraerTodos()
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
 
             SQLConexion conProxy = new SQLConexion();
-            // falta colocar el SP DE TRAER PROVEEDOR
-            return conProxy.EjecutarConsulta(lstParametros, "dbo.TraerEmpleado");
-
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblProviders_SelectAll");
         }
 
-        public DataSet TraerProveedorXId(int codigo)
+        public DataSet TraerXId(int codigo)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
 
@@ -218,8 +214,7 @@ namespace CAD.DAO
             lstParametros.Add(prmA);
 
             SQLConexion conProxy = new SQLConexion();
-            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblPrograms_SelectRow");
-        }
-
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblProviders_SelectRow");
+        } 
     }
 }
