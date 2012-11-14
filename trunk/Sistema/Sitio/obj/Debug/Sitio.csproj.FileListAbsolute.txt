@@ -37,3 +37,16 @@ D:\u\softIII\Proyecto\Sistema\Sitio\bin\CAD.pdb
 D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
 D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\Sitio.dll
 D:\u\softIII\Proyecto\Sistema\Sitio\obj\Debug\Sitio.pdb
+C:\swiii-1\Sistema\Sitio\bin\Sitio.dll
+C:\swiii-1\Sistema\Sitio\bin\Sitio.pdb
+C:\swiii-1\Sistema\Sitio\bin\AjaxControlToolkit.dll
+C:\swiii-1\Sistema\Sitio\bin\Instrumentacion.dll
+C:\swiii-1\Sistema\Sitio\bin\RN.dll
+C:\swiii-1\Sistema\Sitio\bin\log4net.dll
+C:\swiii-1\Sistema\Sitio\bin\CAD.dll
+C:\swiii-1\Sistema\Sitio\bin\Instrumentacion.pdb
+C:\swiii-1\Sistema\Sitio\bin\RN.pdb
+C:\swiii-1\Sistema\Sitio\bin\CAD.pdb
+C:\swiii-1\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
+C:\swiii-1\Sistema\Sitio\obj\Debug\Sitio.dll
+C:\swiii-1\Sistema\Sitio\obj\Debug\Sitio.pdb

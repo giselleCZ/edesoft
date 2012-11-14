@@ -45,7 +45,6 @@ namespace Sitio
             //ddlRol.SelectedValue = getSelectedRol(iRol_id);
             ddlRol.DataBind();
         }
-
         private void SetDDLs(DropDownList d, string val)
         {
             ListItem li;
