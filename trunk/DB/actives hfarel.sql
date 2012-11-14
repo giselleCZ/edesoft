@@ -1,4 +1,4 @@
-USE [dbActive]
+USE [dbActives]
 
 GO
 /****** Object:  UserDefinedDataType [dbo].[sex]    Script Date: 11/13/2012 23:28:10 ******/
@@ -319,7 +319,6 @@ Begin
 		[sRol_name],
 		[bStatus]
 	From tblRols
-	where [iRol_id]>4
 End
 GO
 
@@ -343,7 +342,8 @@ As
 Begin
 	Delete tblRols
 	Where
-		[iRol_id] = @iRol_id
+		[iRol_id] = @iRol_id and
+		[iRol_id]>4
 
 End
 GO
