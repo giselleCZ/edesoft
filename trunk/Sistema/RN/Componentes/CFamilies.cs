@@ -64,7 +64,15 @@ namespace RN.Componentes
             DataSet dtsProxy = daoProxy.SelectRow(iFamilies_id);
             return Load(dtsProxy.Tables[0].Rows[0]);
         }
-       
+        public static clsFamilies SelectByName(string name)
+        {
+            DAOFamilies daoProxy = new DAOFamilies();
+            DataSet dtsProxy = daoProxy.SelectByName(name);
+            if (dtsProxy.Tables[0].Rows.Count > 0)
+                return Load(dtsProxy.Tables[0].Rows[0]);
+            else
+                return null;
+        }
         #endregion
         #region Metodos Privados
         private static List<clsFamilies> CargarLista(DataTable tabla)

@@ -79,8 +79,14 @@ namespace Sitio
             pnlNuevo.Visible = false;
             pnlBuscar.Visible = true;
         }
-
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected bool compareFamily(string name)
+        {
+            clsFamilies f = CFamilies.SelectByName(name);
+            if(f!=null)
+            return (f.SFamily_name== name);
+            return false;
+        }
+        protected void btnGuardarFamilies_Click(object sender, EventArgs e)
         {
             clsFamilies Family = new clsFamilies();
             Family.SFamily_name = txtFamily_name.Text;
@@ -98,10 +104,9 @@ namespace Sitio
             }
             else
             {
-                Family.IFamily_id= Convert.ToInt32(txtCodigo.Text);
+                Family.IFamily_id = Convert.ToInt32(txtCodigo.Text);
                 CFamilies.Update(Family);
                 LoadFamilies();
-
                 pnlNuevo.Visible = false;
                 grdFamilies.Enabled = true;
             }

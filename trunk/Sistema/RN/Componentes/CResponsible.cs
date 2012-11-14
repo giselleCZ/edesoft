@@ -13,7 +13,7 @@ namespace RN.Componentes
         {
             ValidationException x = new ValidationException();
             if (string.IsNullOrEmpty(objProxy.SPerson_name)&& string.IsNullOrEmpty(objProxy.SPerson_lname))
-                x.AgregarError("verifique el nombre del y el apellido de la persona");
+                x.AgregarError("verifique el nombre y el apellido de la persona");
             if (objProxy.DEnd_time <= objProxy.DStart_time)
                 x.AgregarError("La fecha de fin deber ser mayor a la fecha de inicio");
             if (string.IsNullOrEmpty(objProxy.SUsername))
@@ -33,7 +33,7 @@ namespace RN.Componentes
                 x.AgregarError("Ingrese el código");
 
             if (string.IsNullOrEmpty(objProxy.SPerson_name) && string.IsNullOrEmpty(objProxy.SPerson_lname))
-                x.AgregarError("verifique el nombre del y el apellido de la persona");
+                x.AgregarError("verifique el nombre y el apellido de la persona");
 
             if (x.Cantidad > 0)
                 throw x;

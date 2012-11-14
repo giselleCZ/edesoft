@@ -148,7 +148,7 @@ namespace Sitio
             pnlBuscar.Visible = true;
         }
 
-        protected void btnGuardar_Click(object sender, EventArgs e)
+        protected void btnGuardarResponsibles_Click(object sender, EventArgs e)
         {
             clsResponsible Responsible = new clsResponsible();
             Responsible.SPerson_dni = txtCi.Text;

@@ -11,7 +11,7 @@ namespace RN.Entidades
             private int iActive_id;
             private string sActive_name;
             private clsProvider iProvider_id;
-            private clsSubFamily iSubFamily_id;
+            private clsSubFamilies iSubFamily_id;
             private string sActive_desc;
             private string sBarCode;
             private DateTime dRegister_time;
@@ -49,7 +49,7 @@ namespace RN.Entidades
                 set { iProvider_id = value; }
             }
 
-            public clsSubFamily ISubFamily_id
+            public clsSubFamilies ISubFamily_id
             {
                 get { return iSubFamily_id; }
                 set { iSubFamily_id = value; }
