@@ -26,3 +26,10 @@ D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\RN.dll
 D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\RN.pdb
 D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\CAD.dll
 D:\u\softIII\Proyecto\Sistema\RN\bin\Debug\CAD.pdb
+C:\swiii-1\Sistema\RN\bin\Debug\RN.dll
+C:\swiii-1\Sistema\RN\bin\Debug\RN.pdb
+C:\swiii-1\Sistema\RN\bin\Debug\CAD.dll
+C:\swiii-1\Sistema\RN\bin\Debug\CAD.pdb
+C:\swiii-1\Sistema\RN\obj\Debug\ResolveAssemblyReference.cache
+C:\swiii-1\Sistema\RN\obj\Debug\RN.dll
+C:\swiii-1\Sistema\RN\obj\Debug\RN.pdb

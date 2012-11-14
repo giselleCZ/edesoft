@@ -13,3 +13,8 @@ D:\u\softIII\Proyecto\Sistema\Comunicacion\bin\Debug\Comunicacion.pdb
 D:\u\softIII\Proyecto\Sistema\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
 D:\u\softIII\Proyecto\Sistema\Comunicacion\obj\Debug\Comunicacion.dll
 D:\u\softIII\Proyecto\Sistema\Comunicacion\obj\Debug\Comunicacion.pdb
+C:\swiii-1\Sistema\Comunicacion\bin\Debug\Comunicacion.dll
+C:\swiii-1\Sistema\Comunicacion\bin\Debug\Comunicacion.pdb
+C:\swiii-1\Sistema\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
+C:\swiii-1\Sistema\Comunicacion\obj\Debug\Comunicacion.dll
+C:\swiii-1\Sistema\Comunicacion\obj\Debug\Comunicacion.pdb

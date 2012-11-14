@@ -16,3 +16,9 @@ D:\u\softIII\Proyecto\Sistema\Instrumentacion\bin\Debug\log4net.dll
 D:\u\softIII\Proyecto\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
 D:\u\softIII\Proyecto\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
 D:\u\softIII\Proyecto\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb
+C:\swiii-1\Sistema\Instrumentacion\bin\Debug\Instrumentacion.dll
+C:\swiii-1\Sistema\Instrumentacion\bin\Debug\Instrumentacion.pdb
+C:\swiii-1\Sistema\Instrumentacion\bin\Debug\log4net.dll
+C:\swiii-1\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
+C:\swiii-1\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
+C:\swiii-1\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb
