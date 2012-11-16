@@ -40,3 +40,11 @@ C:\swiii-1\Sistema\CAD\bin\Debug\Instrumentacion.pdb
 C:\swiii-1\Sistema\CAD\obj\Debug\ResolveAssemblyReference.cache
 C:\swiii-1\Sistema\CAD\obj\Debug\CAD.dll
 C:\swiii-1\Sistema\CAD\obj\Debug\CAD.pdb
+D:\IS3-Project\Sistema\CAD\bin\Debug\CAD.dll
+D:\IS3-Project\Sistema\CAD\bin\Debug\CAD.pdb
+D:\IS3-Project\Sistema\CAD\bin\Debug\Instrumentacion.dll
+D:\IS3-Project\Sistema\CAD\bin\Debug\log4net.dll
+D:\IS3-Project\Sistema\CAD\bin\Debug\Instrumentacion.pdb
+D:\IS3-Project\Sistema\CAD\obj\Debug\ResolveAssemblyReference.cache
+D:\IS3-Project\Sistema\CAD\obj\Debug\CAD.dll
+D:\IS3-Project\Sistema\CAD\obj\Debug\CAD.pdb

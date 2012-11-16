@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAOCostCenter.cs" />
     <Compile Include="DAO\DAOSubFamily.cs" />
     <Compile Include="DAO\DAOFamilies.cs" />
     <Compile Include="DAO\DAORol.cs" />

@@ -63,6 +63,7 @@
     <Content Include="App_Themes\Default\index.css" />
     <Content Include="Consultar.asmx" />
     <Content Include="central.htm" />
+    <Content Include="frmCostsCenter.aspx" />
     <Content Include="main.htm" />
     <Content Include="frmSubFamilies.aspx" />
     <Content Include="css\jquery-ui-1.9.1.custom.css" />
@@ -115,6 +116,13 @@
     <Compile Include="Consultar.asmx.cs">
       <DependentUpon>Consultar.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCostsCenter.aspx.cs">
+      <DependentUpon>frmCostsCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCostsCenter.aspx.designer.cs">
+      <DependentUpon>frmCostsCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmSubFamilies.aspx.cs">
       <DependentUpon>frmSubFamilies.aspx</DependentUpon>

@@ -6,11 +6,11 @@ using System.Collections.Generic;
 
 namespace CAD.DAO
 {
-   public class DAOCostCenter
+    public class DAOCostCenter
     {
-    public int Insert(string sCostCenter_name, string sCostCenter_desc, int iCostCenter_gestion)
-            {
-              List<DbParameter> lstParametros = new List<DbParameter>();
+        public int Insert(string sCostCenter_name, string sCostCenter_desc, int iCostCenter_gestion)
+        {
+            List<DbParameter> lstParametros = new List<DbParameter>();
             DbParameter prmCC = new SqlParameter();
             prmCC.DbType = DbType.Int32;
             prmCC.ParameterName = "@iCostCenter_id";
@@ -23,7 +23,7 @@ namespace CAD.DAO
             prmsCostCenter_name.Value = sCostCenter_name;
             prmsCostCenter_name.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsCostCenter_name);
-            
+
             DbParameter prmsCostCenter_desc = new SqlParameter();
             prmsCostCenter_desc.DbType = DbType.String;
             prmsCostCenter_desc.ParameterName = "@sCostCenter_desc";
@@ -31,8 +31,6 @@ namespace CAD.DAO
             prmsCostCenter_desc.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsCostCenter_desc);
 
-
-        
             DbParameter prmiCostCenter_gestion = new SqlParameter();
             prmiCostCenter_gestion.DbType = DbType.Int16;
             prmiCostCenter_gestion.ParameterName = "@iCostCenter_gestion";
@@ -53,7 +51,8 @@ namespace CAD.DAO
             DbParameter prmCC = new SqlParameter();
             prmCC.DbType = DbType.Int32;
             prmCC.ParameterName = "@iCostCenter_id";
-            prmCC.Direction = ParameterDirection.Output;
+            prmCC.Value = iCostCenter_id;
+            prmCC.Direction = ParameterDirection.Input;
             lstParametros.Add(prmCC);
 
             DbParameter prmsCostCenter_name = new SqlParameter();
@@ -62,7 +61,7 @@ namespace CAD.DAO
             prmsCostCenter_name.Value = sCostCenter_name;
             prmsCostCenter_name.Direction = ParameterDirection.Input;
             lstParametros.Add(prmsCostCenter_name);
-            
+
             DbParameter prmsCostCenter_desc = new SqlParameter();
             prmsCostCenter_desc.DbType = DbType.String;
             prmsCostCenter_desc.ParameterName = "@sCostCenter_desc";
@@ -71,7 +70,7 @@ namespace CAD.DAO
             lstParametros.Add(prmsCostCenter_desc);
 
 
-        
+
             DbParameter prmiCostCenter_gestion = new SqlParameter();
             prmiCostCenter_gestion.DbType = DbType.Int16;
             prmiCostCenter_gestion.ParameterName = "@iCostCenter_gestion";
@@ -83,7 +82,7 @@ namespace CAD.DAO
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarDML(lstParametros, "dbo.ActCostCenter");
         }
-       public bool Delete(int iCostCenter_id)
+        public bool Eliminar(int iCostCenter_id)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();
 
@@ -94,6 +93,12 @@ namespace CAD.DAO
             prmiCostCenter_id.Direction = ParameterDirection.Input;
             lstParametros.Add(prmiCostCenter_id);
 
+            /*   DbParameter prmDe = new SqlParameter();
+               prmDe.DbType = DbType.Int32;
+               prmDe.ParameterName = "@iEvento";
+               prmDe.Value = 3;
+               prmDe.Direction = ParameterDirection.Input;
+               lstParametros.Add(prmDe);*/
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarDML(lstParametros, "dbo.DeleteCostCenter");
         }
@@ -104,5 +109,28 @@ namespace CAD.DAO
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarConsulta(lstParametros, "dbo.SelCostCenter");
         }
-       }
+        public DataSet TraerCentrodeCostosXId(int iCostCenter_id)
+        {
+            List<DbParameter> lstParametros = new List<DbParameter>();
+
+            DbParameter prmA = new SqlParameter();
+            prmA.DbType = DbType.Int32;
+            prmA.ParameterName = "@iCostCenter_id";
+            prmA.Value = iCostCenter_id;
+            prmA.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmA);
+
+            DbParameter prmD = new SqlParameter();
+            prmD.DbType = DbType.Int32;
+            prmD.ParameterName = "@iEvento";
+            prmD.Value = 5;
+            prmD.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmD);
+            SQLConexion conProxy = new SQLConexion();
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.TraerCostCenterXId");
+        }
+    }
 }
+    
+
+
