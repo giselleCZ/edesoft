@@ -20,7 +20,8 @@
         REGISTRO
         CENTRO DE COSTOS</span></strong><br />
         <br />
-        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <asp:Label ID="lblMensaje" runat="server" Font-Bold="True" Font-Size="Larger" 
+            ForeColor="Blue"></asp:Label>
         <br />
         <asp:Panel ID="pnlNuevo" runat="server">
             <asp:Button ID="btNuevo0" runat="server" onclick="btNuevo_Click1" 
@@ -67,7 +68,8 @@
         <br />
     
         <asp:Panel ID="pnlBuscar" runat="server">
-             <asp:Label ID="lblMensaje0" runat="server"></asp:Label>
+             <asp:Label ID="lblMensaje0" runat="server" Font-Bold="True" Font-Size="Large" 
+                 ForeColor="Red"></asp:Label>
              <strong><span class="style2">
              <br />
              <br />

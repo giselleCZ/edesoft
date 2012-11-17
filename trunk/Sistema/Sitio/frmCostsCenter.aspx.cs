@@ -132,6 +132,7 @@ namespace Sitio
         {
             pnlNuevo.Visible = true;
             pnlBuscar.Visible = false;
+            lblMensaje.Text = "";
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDesc.Text = "";
