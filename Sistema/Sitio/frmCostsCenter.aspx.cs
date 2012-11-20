@@ -11,12 +11,11 @@ namespace Sitio
 {
     public partial class frmCostsCenter : System.Web.UI.Page
     {
-        // private clsCostCenter oCostCenter;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                pnlBuscar.Visible = false;
                 CargarGrid();
             }
         }
@@ -25,95 +24,93 @@ namespace Sitio
             List<clsCostCenter> obj = CCostCenter.Traer();
             grdCostCenter.DataSource = obj;
             grdCostCenter.DataBind();
-            lblMensaje0.Text = "";
-            txtNombre.Text = "";
-            txtDesc.Text = "";
-            txtGestion.Text = "";
+            /* txtNombrecc.Text = "";
+             txtDesccc.Text = "";
+             txtGestioncc.Text = "";*/
 
         }
+        public string getCostCenter(int ICostCenter_id)
+        {
+            RN.Entidades.clsCostCenter c = CCostCenter.TraerXId(ICostCenter_id);
+            return c.SCostCente_name;
+        }
+
         protected void ResultGrid_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int id = Convert.ToInt32(e.CommandArgument);
 
-            lblMensaje0.Text = "";
-            lblMensaje.Text = "";
+            int id = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Editar")
             {
-                this.pnlNuevo.Visible = true;
-                this.pnlBuscar.Visible = false;
-
                 clsCostCenter c = CCostCenter.TraerXId(id);
-                txtNombre.Text = c.SCostCente_name;
-                txtCodigo.Text = c.ICostCenter_id + "";
-                txtDesc.Text = c.SCostCenter_desc;
-                txtGestion.Text = c.DGestion_time + "";
+                txtCodigocc.Text = c.ICostCenter_id.ToString();
+                txtNombrecc.Text = c.SCostCente_name;
+                txtDesccc.Text = c.SCostCenter_desc;
+                txtGestioncc.Text = c.DGestion_time.ToString();
 
+                /*   clsCostCenter c = CCostCenter.TraerXId(id);
+                  txtNombrecc.Text = c.SCostCente_name;
+                  txtCodigocc.Text = c.ICostCenter_id + "";
+                  txtDesccc.Text = c.SCostCenter_desc;
+                  txtGestioncc.Text = c.DGestion_time + "";*/
+
+                CargarGrid();
+
+                pnlNuevo.Visible = true;
+                pnlBuscar.Visible = false;
+                grdCostCenter.Enabled = false;
             }
             else
             {
                 if (e.CommandName == "Eliminar")
                 {
-                    if (CCostCenter.Eliminar(id))
-                    {
-                        lblMensaje.Text = "Se Elimino Correctamente";
-                        CargarGrid();
-                    }
-                    else
-                    {
-                        lblMensaje0.Text = "Error al Eliminar";
-                    }
+                    CCostCenter.Eliminar(id);
+                    CargarGrid();
                 }
             }
         }
 
         protected void btguardar_Click(object sender, EventArgs e)
         {
-            lblMensaje.Text = "";
-            if (this.txtCodigo.Text.Equals(""))
+            clsCostCenter cc = new clsCostCenter();
+            cc.SCostCente_name = txtNombrecc.Text;
+            cc.SCostCenter_desc = txtDesccc.Text;
+            cc.DGestion_time = Convert.ToInt32(txtGestioncc.Text);
+
+            if (string.IsNullOrEmpty(txtCodigocc.Text))
             {
-                if (string.IsNullOrEmpty(txtNombre.Text))
-                    lblMensaje0.Text = "Ingrese Centro de costos";
-                else
-                {
-                    if (string.IsNullOrEmpty(txtDesc.Text))
-                        lblMensaje0.Text = "Inserte Descripcion";
-                    else
-                    {
-                        if (string.IsNullOrEmpty(txtGestion.Text))
+                /*  int codigo = CCostCenter.Insert(cc);
+                  txtCodigo.Text = codigo.ToString();
+                  pnlBuscar.Visible = true;
+                  CargarGrid();
+                  grdCostCenter.Enabled = true;*/
+                int codigo = CCostCenter.Insert(cc);
 
-                            lblMensaje0.Text = "Inserte gestion";
+                CargarGrid();
+                this.pnlBuscar.Visible = true;
 
-                        else
-                        {
-                            clsCostCenter c = new clsCostCenter();
-                            c.SCostCente_name = txtNombre.Text;
-                            c.SCostCenter_desc = txtDesc.Text;
-                            c.DGestion_time = Convert.ToInt16(txtGestion.Text);
-                            int codigo = CCostCenter.Insert(c);
-                            lblMensaje.Text = "Datos Guardados Correctamente";
-                            CargarGrid();
-                            this.pnlBuscar.Visible = true;
-
-                        }
-                    }
-                }
             }
             else
             {
-                clsCostCenter c = new clsCostCenter();
-                c.SCostCente_name = txtNombre.Text;
-                c.SCostCenter_desc = txtDesc.Text;
-                c.DGestion_time = Convert.ToInt16(txtGestion.Text);
-                c.ICostCenter_id = Convert.ToInt32(txtCodigo.Text);
-                bool codigo = CCostCenter.Update(c);
-                txtNombre.Text = codigo.ToString();
-                lblMensaje.Text = "Datos Guardados Correctamente";
+
+                cc.ICostCenter_id = Convert.ToInt32(txtCodigocc.Text);
+                CCostCenter.Update(cc);
+                CargarGrid();
+                pnlNuevo.Visible = false;
+                grdCostCenter.Enabled = true;
+
+                /*  clsCostCenter c = new clsCostCenter();
+                  c.SCostCente_name = txtNombrecc.Text;
+                  c.SCostCenter_desc = txtDesccc.Text;
+                  c.DGestion_time = Convert.ToInt16(txtGestioncc.Text);
+                  c.ICostCenter_id = Convert.ToInt32(txtCodigocc.Text);
+                  bool codigo = CCostCenter.Update(c);
+                  txtNombrecc.Text = codigo.ToString();*/
+
                 CargarGrid();
                 this.pnlBuscar.Visible = true;
             }
-
-
         }
+
 
         protected void dgvCostCenter_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -128,22 +125,24 @@ namespace Sitio
                txtGestion.Text = c.oDatos.Tables[0].Rows[0][3].ToString();*/
         }
 
-        protected void btNuevo_Click1(object sender, EventArgs e)
+        protected void btnNuevo_Click(object sender, EventArgs e)
         {
             pnlNuevo.Visible = true;
             pnlBuscar.Visible = false;
-            lblMensaje.Text = "";
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtDesc.Text = "";
-            txtGestion.Text = "";
+
+            txtCodigocc.Text = "";
+            txtNombrecc.Text = "";
+            txtDesccc.Text = "";
+            txtGestioncc.Text = "";
+
+            pnlNuevo.Visible = true;
+            grdCostCenter.Enabled = false;
         }
 
-
-        protected void btBuscar_Click1(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             pnlNuevo.Visible = false;
             pnlBuscar.Visible = true;
         }
+        }
     }
-}

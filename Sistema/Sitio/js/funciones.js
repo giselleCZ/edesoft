@@ -100,4 +100,33 @@ $(document).ready(function () {
         }
     });
 });
+//validacion para centro de costos
+$(document).ready(function () {
+    var depreg = /^[0-9]+$/;
+    $("#btguardar").click(function () {
+        $(".error").remove();
+        if ($("#txtNombrecc").val() == "") {
+            $("#txtNombrecc").focus().after("<span class='error'>Ingrese el nombre para centro de costo</span>");
+            return false;
+        } else if ($("#txtDesccc").val() == "") {
+            $("#txtDesccc").focus().after("<span class='error'>Ingrese una descripcion</span>");
+            return false;
+        } else if ($("#txtGestioncc").val() == "" || !depreg.test($("#txtGestioncc").val())) {
+            $("#txtGestioncc").focus().after("<span class='error'>Ingrese una cantidad en numeros</span>");
+            return false;
+        }
+    });
+    $("#txtNombrecc, #txtDesccc, #txtGestioncc").keyup(function () {
+        if ($(this).val() != "") {
+            $(".error").fadeOut();
+            return false;
+        }
+    });
+    $("#txtGestioncc").keyup(function () {
+        if ($(this).val() != "" && depreg.test($(this).val())) {
+            $(".error").fadeOut();
+            return false;
+        }
+    });
+});
 
