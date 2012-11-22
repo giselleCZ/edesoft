@@ -64,6 +64,7 @@
     <Content Include="Consultar.asmx" />
     <Content Include="central.htm" />
     <Content Include="frmCostsCenter.aspx" />
+    <Content Include="frmLogin.aspx" />
     <Content Include="main.htm" />
     <Content Include="frmSubFamilies.aspx" />
     <Content Include="css\jquery-ui-1.9.1.custom.css" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="frmCostsCenter.aspx.designer.cs">
       <DependentUpon>frmCostsCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmSubFamilies.aspx.cs">
       <DependentUpon>frmSubFamilies.aspx</DependentUpon>
