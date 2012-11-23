@@ -9,7 +9,7 @@ namespace RN.Entidades
     {
         #region Atributos
             private int iAsigLocActive;
-            private clsPoints iPoint_id;
+          //  private clsPoints iPoint_id;
             private clsActive iActive_id;
             private DateTime dAsign_time;
             private DateTime sAsign_desc;
@@ -21,11 +21,11 @@ namespace RN.Entidades
                 set { iAsigLocActive = value; }
             }
 
-            public clsPoints IPoints_id
-            {
-                get { return iPoint_id; }
-                set { iPoint_id = value; }
-            } 
+            //public clsPoints IPoints_id
+            //{
+            //    get { return iPoint_id; }
+            //    set { iPoint_id = value; }
+            //} 
 
             public clsActive IActive_id
             {
@@ -51,3 +51,4 @@ namespace RN.Entidades
 
     }
 }
+6

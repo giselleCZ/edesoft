@@ -63,12 +63,9 @@
     <Content Include="App_Themes\Default\index.css" />
     <Content Include="Consultar.asmx" />
     <Content Include="central.htm" />
-
-    <Content Include="frmLogin.aspx" />
-
     <Content Include="frmCostsCenter.aspx" />
-    <Content Include="frmLogin.aspx" />
-
+    <Content Include="Global.asax" />
+    <Content Include="Localidad.aspx" />
     <Content Include="main.htm" />
     <Content Include="frmSubFamilies.aspx" />
     <Content Include="css\jquery-ui-1.9.1.custom.css" />
@@ -92,12 +89,12 @@
     </None>
     <Content Include="Error.aspx" />
     <Content Include="frmResponsibles.aspx" />
-    <Content Include="Global.asax" />
     <Content Include="inicio.htm" />
     <Content Include="js\funciones.js" />
     <Content Include="js\jquery-ui-1.9.1.custom.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.ui.datepicker.js" />
+    <Content Include="Proveedor.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -122,15 +119,6 @@
       <DependentUpon>Consultar.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-
-    <Compile Include="frmLogin.aspx.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmLogin.aspx.designer.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
-    </Compile>
-
     <Compile Include="frmCostsCenter.aspx.cs">
       <DependentUpon>frmCostsCenter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,14 +126,6 @@
     <Compile Include="frmCostsCenter.aspx.designer.cs">
       <DependentUpon>frmCostsCenter.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.aspx.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmLogin.aspx.designer.cs">
-      <DependentUpon>frmLogin.aspx</DependentUpon>
-    </Compile>
-
     <Compile Include="frmSubFamilies.aspx.cs">
       <DependentUpon>frmSubFamilies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +177,14 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Localidad.aspx.cs">
+      <DependentUpon>Localidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Localidad.aspx.designer.cs">
+      <DependentUpon>Localidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="NoExiste.aspx.cs">
       <DependentUpon>NoExiste.aspx</DependentUpon>
@@ -210,6 +198,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor.aspx.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proveedor.aspx.designer.cs">
+      <DependentUpon>Proveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
