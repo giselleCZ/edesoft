@@ -28,3 +28,9 @@ D:\IS3-Project\Sistema\Instrumentacion\bin\Debug\log4net.dll
 D:\IS3-Project\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
 D:\IS3-Project\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
 D:\IS3-Project\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb
+C:\soft\Sistema\Instrumentacion\bin\Debug\Instrumentacion.dll
+C:\soft\Sistema\Instrumentacion\bin\Debug\Instrumentacion.pdb
+C:\soft\Sistema\Instrumentacion\bin\Debug\log4net.dll
+C:\soft\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
+C:\soft\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
+C:\soft\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb
