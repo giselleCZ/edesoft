@@ -10,7 +10,7 @@ namespace RN.Entidades
         #region Atributos            
             private int iActive_id;
             private string sActive_name;
-            private clsProvider iProvider_id;
+           // private clsProvider iProvider_id;
             private clsSubFamilies iSubFamily_id;
             private string sActive_desc;
             private string sBarCode;
@@ -43,11 +43,11 @@ namespace RN.Entidades
                 set { iActive_id = value; }
             }
 
-            public clsProvider IProvider_id
-            {
-                get { return iProvider_id; }
-                set { iProvider_id = value; }
-            }
+            //public clsProvider IProvider_id
+            //{
+            //    get { return iProvider_id; }
+            //    set { iProvider_id = value; }
+            //}
 
             public clsSubFamilies ISubFamily_id
             {
