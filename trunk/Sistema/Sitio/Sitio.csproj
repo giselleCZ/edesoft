@@ -63,12 +63,12 @@
     <Content Include="App_Themes\Default\index.css" />
     <Content Include="Consultar.asmx" />
     <Content Include="central.htm" />
-<<<<<<< .mine
+
     <Content Include="frmLogin.aspx" />
-=======
+
     <Content Include="frmCostsCenter.aspx" />
     <Content Include="frmLogin.aspx" />
->>>>>>> .r30
+
     <Content Include="main.htm" />
     <Content Include="frmSubFamilies.aspx" />
     <Content Include="css\jquery-ui-1.9.1.custom.css" />
@@ -122,7 +122,7 @@
       <DependentUpon>Consultar.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-<<<<<<< .mine
+
     <Compile Include="frmLogin.aspx.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,7 +130,7 @@
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
-=======
+
     <Compile Include="frmCostsCenter.aspx.cs">
       <DependentUpon>frmCostsCenter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,7 +145,7 @@
     <Compile Include="frmLogin.aspx.designer.cs">
       <DependentUpon>frmLogin.aspx</DependentUpon>
     </Compile>
->>>>>>> .r30
+
     <Compile Include="frmSubFamilies.aspx.cs">
       <DependentUpon>frmSubFamilies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
