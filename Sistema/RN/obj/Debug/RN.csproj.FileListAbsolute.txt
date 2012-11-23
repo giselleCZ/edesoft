@@ -40,3 +40,10 @@ D:\IS3-Project\Sistema\RN\bin\Debug\CAD.pdb
 D:\IS3-Project\Sistema\RN\obj\Debug\ResolveAssemblyReference.cache
 D:\IS3-Project\Sistema\RN\obj\Debug\RN.dll
 D:\IS3-Project\Sistema\RN\obj\Debug\RN.pdb
+C:\soft\Sistema\RN\obj\Debug\ResolveAssemblyReference.cache
+C:\soft\Sistema\RN\bin\Debug\RN.dll
+C:\soft\Sistema\RN\bin\Debug\RN.pdb
+C:\soft\Sistema\RN\bin\Debug\CAD.dll
+C:\soft\Sistema\RN\bin\Debug\CAD.pdb
+C:\soft\Sistema\RN\obj\Debug\RN.dll
+C:\soft\Sistema\RN\obj\Debug\RN.pdb

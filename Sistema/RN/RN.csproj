@@ -70,13 +70,13 @@
     <Compile Include="Componentes\CAsigResponsibleActive.cs" />
     <Compile Include="Componentes\CCostCenter.cs" />
     <Compile Include="Componentes\CFamilies.cs" />
+    <Compile Include="Componentes\CLocalidad.cs" />
+    <Compile Include="Componentes\CProveedor.cs" />
+    <Compile Include="Componentes\CSubArea.cs" />
     <Compile Include="Componentes\CSubFamilies.cs" />
     <Compile Include="Componentes\CRol.cs" />
     <Compile Include="Componentes\CResponsible.cs" />
-    <Compile Include="Componentes\CProvider.cs" />
-    <Compile Include="Componentes\CProviderType.cs" />
     <Compile Include="Entidades\clsCostCenter.cs" />
-    <Compile Include="Entidades\clsLocation.cs" />
     <Compile Include="Entidades\clsRevalue.cs" />
     <Compile Include="Entidades\clsFamilies.cs" />
     <Compile Include="Entidades\clsResponsible.cs" />
@@ -85,11 +85,7 @@
     <Compile Include="Entidades\clsSubFamilies.cs" />
     <Compile Include="Entidades\clsAsignPointsActives.cs" />
     <Compile Include="Entidades\clsDecline.cs" />
-    <Compile Include="Entidades\clsProvider.cs" />
-    <Compile Include="Entidades\clsPoints.cs" />
     <Compile Include="Entidades\clsArea.cs" />
-    <Compile Include="Entidades\clsSubArea.cs" />
-    <Compile Include="Entidades\clsProviderType.cs" />
     <Compile Include="Entidades\clsProgram.cs" />
     <Compile Include="Entidades\clsPrivileges.cs" />
     <Compile Include="Entidades\clsRol.cs" />
@@ -102,14 +98,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entidades\Factura.cs" />
+    <Compile Include="Entidades\Localidad.cs" />
+    <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\SubArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationException.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CAD\CAD.csproj">
-      <Project>{010D6F5B-86A8-4F4B-8F06-189D4D5B8C49}</Project>
-      <Name>CAD</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -130,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Workflows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAD\CAD.csproj">
+      <Project>{010D6F5B-86A8-4F4B-8F06-189D4D5B8C49}</Project>
+      <Name>CAD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
