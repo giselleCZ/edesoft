@@ -64,3 +64,6 @@ D:\IS3-Project\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
 D:\IS3-Project\Sistema\Sitio\obj\Debug\Sitio.dll
 D:\IS3-Project\Sistema\Sitio\obj\Debug\Sitio.pdb
 C:\soft\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
+C:\soft3\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
+C:\soft3\Sistema\Sitio\obj\Debug\Sitio.dll
+C:\soft3\Sistema\Sitio\obj\Debug\Sitio.pdb
