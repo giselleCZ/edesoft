@@ -8,14 +8,16 @@ namespace CAD.DAO
 {
     public class DAOActive
     {
+
+
         public int Insert(
             string sActive_name,
-            string sStatus,
             int iSubFamily_id,
             int iProvider_id,
+            string sActive_desc,
             string sBarcode,
             DateTime dRegister_time,
-            int iUtilTime,
+            DateTime iUtilTime,
             string sBrand,
             string sModel,
             string sForm,
@@ -23,23 +25,24 @@ namespace CAD.DAO
             string sColor,
             string sCapacity,
             string sMaterial,
-            double iHeihgt,
-            double iWidth,
-            double iWide,
-            double iDiameter,
+            decimal iHeihgt,
+            decimal iWidth,
+            decimal iWide,
+            decimal iDiameter,
             string sUnit,
             int iDivNumber,
             string sAsign_type,
-            string sAcquisition_type,
+            string sAquisition_type,
             DateTime dtBuy_time,
-            double iBuy_price,
-            bool bInActive)
+            decimal iBuy_price,
+            bool sStatus
+            )
             {
                 List<DbParameter> lstParametros = new List<DbParameter>();
             
                 DbParameter prmCod = new SqlParameter();
                 prmCod.DbType = DbType.Int32;
-                prmCod.ParameterName = "@id";
+                prmCod.ParameterName = "@iActive_id";
                 prmCod.Direction = ParameterDirection.Output;
                 lstParametros.Add(prmCod);
 
@@ -49,13 +52,6 @@ namespace CAD.DAO
                 prmsActive_name.Value = sActive_name;
                 prmsActive_name.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsActive_name);
-
-                DbParameter prmsStatus = new SqlParameter();
-                prmsStatus.DbType = DbType.Binary;
-                prmsStatus.ParameterName = "@sStatus";
-                prmsStatus.Value = sStatus;
-                prmsStatus.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmsStatus);
 
                 DbParameter prmiSubFamily_id = new SqlParameter();
                 prmiSubFamily_id.DbType = DbType.Int16;
@@ -77,20 +73,6 @@ namespace CAD.DAO
                 prmsBarcode.Value = sBarcode;
                 prmsBarcode.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsBarcode);
-
-                DbParameter prmdRegister_time = new SqlParameter();
-                prmdRegister_time.DbType = DbType.DateTime;
-                prmdRegister_time.ParameterName = "@dRegister_time";
-                prmdRegister_time.Value = dRegister_time;
-                prmdRegister_time.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmdRegister_time);
-
-                DbParameter prmiUtilTime = new SqlParameter();
-                prmiUtilTime.DbType = DbType.Int32;
-                prmiUtilTime.ParameterName = "@iUtilTime";
-                prmiUtilTime.Value = iUtilTime;
-                prmiUtilTime.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiUtilTime);
 
                 DbParameter prmsBrand = new SqlParameter();
                 prmsBrand.DbType = DbType.String;
@@ -141,47 +123,12 @@ namespace CAD.DAO
                 prmsMaterial.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsMaterial);
 
-                DbParameter prmiHeihgt = new SqlParameter();
-                prmiHeihgt.DbType = DbType.Int16;
-                prmiHeihgt.ParameterName = "@iHeihgt";
-                prmiHeihgt.Value = iHeihgt;
-                prmiHeihgt.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiHeihgt);
-
-                DbParameter prmiWidth = new SqlParameter();
-                prmiWidth.DbType = DbType.Int16;
-                prmiWidth.ParameterName = "@iWidth";
-                prmiWidth.Value = iWidth;
-                prmiWidth.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiWidth);
-
-                DbParameter prmiWide = new SqlParameter();
-                prmiWide.DbType = DbType.Int16;
-                prmiWide.ParameterName = "@iWide";
-                prmiWide.Value = iWide;
-                prmiWide.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiWide);
-
-                DbParameter prmiDiameter = new SqlParameter();
-                prmiDiameter.DbType = DbType.Int16;
-                prmiDiameter.ParameterName = "@iDiameter";
-                prmiDiameter.Value = iDiameter;
-                prmiDiameter.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiDiameter);
-
                 DbParameter prmsUnit = new SqlParameter();
                 prmsUnit.DbType = DbType.String;
                 prmsUnit.ParameterName = "@sUnit";
                 prmsUnit.Value = sUnit;
                 prmsUnit.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsUnit);
-
-                DbParameter prmiDivNumber = new SqlParameter();
-                prmiDivNumber.DbType = DbType.Int16;
-                prmiDivNumber.ParameterName = "@iDivNumber";
-                prmiDivNumber.Value = iDivNumber;
-                prmiDivNumber.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiDivNumber);
 
                 DbParameter prmsAsign_type = new SqlParameter();
                 prmsAsign_type.DbType = DbType.String;
@@ -190,12 +137,40 @@ namespace CAD.DAO
                 prmsAsign_type.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsAsign_type);
 
-                DbParameter prmsAcquisition_type = new SqlParameter();
-                prmsAcquisition_type.DbType = DbType.String;
-                prmsAcquisition_type.ParameterName = "@sAcquisition_type";
-                prmsAcquisition_type.Value = sAcquisition_type;
-                prmsAcquisition_type.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmsAcquisition_type);
+                DbParameter prmsAquisition_type = new SqlParameter();
+                prmsAquisition_type.DbType = DbType.String;
+                prmsAquisition_type.ParameterName = "@sAcquisition_type";
+                prmsAquisition_type.Value = sAquisition_type;
+                prmsAquisition_type.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsAquisition_type);
+            
+                DbParameter prmsStatus = new SqlParameter();
+                prmsStatus.DbType = DbType.Boolean;
+                prmsStatus.ParameterName = "@sStatus";
+                prmsStatus.Value = sStatus;
+                prmsStatus.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsStatus);
+
+                DbParameter prmsActive_desc = new SqlParameter();
+                prmsActive_desc.DbType = DbType.String;
+                prmsActive_desc.ParameterName = "@sActive_desc";
+                prmsActive_desc.Value = sActive_desc;
+                prmsActive_desc.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsActive_desc);
+
+                DbParameter prmdRegister_time = new SqlParameter();
+                prmdRegister_time.DbType = DbType.DateTime;
+                prmdRegister_time.ParameterName = "@dRegister_time";
+                prmdRegister_time.Value = dRegister_time;
+                prmdRegister_time.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmdRegister_time);
+
+                DbParameter prmiUtilTime = new SqlParameter();
+                prmiUtilTime.DbType = DbType.DateTime;
+                prmiUtilTime.ParameterName = "@iUtilTime";
+                prmiUtilTime.Value = iUtilTime;
+                prmiUtilTime.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiUtilTime);
 
                 DbParameter prmdtBuy_time = new SqlParameter();
                 prmdtBuy_time.DbType = DbType.DateTime;
@@ -204,22 +179,51 @@ namespace CAD.DAO
                 prmdtBuy_time.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmdtBuy_time);
 
+                DbParameter prmiHeihgt = new SqlParameter();
+                prmiHeihgt.DbType = DbType.Decimal;
+                prmiHeihgt.ParameterName = "@iHeihgt";
+                prmiHeihgt.Value = iHeihgt;
+           
+                prmiHeihgt.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiHeihgt);
+
+                DbParameter prmiWidth = new SqlParameter();
+                prmiWidth.DbType = DbType.Decimal;
+                prmiWidth.ParameterName = "@iWidth";
+                prmiWidth.Value = iWidth;
+                prmiWidth.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiWidth);
+
+                DbParameter prmiWide = new SqlParameter();
+                prmiWide.DbType = DbType.Decimal;
+                prmiWide.ParameterName = "@iWide";
+                prmiWide.Value = iWide;
+                prmiWide.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiWide);
+
+                DbParameter prmiDiameter = new SqlParameter();
+                prmiDiameter.DbType = DbType.Decimal;
+                prmiDiameter.ParameterName = "@iDiameter";
+                prmiDiameter.Value = iDiameter;
+                prmiDiameter.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiDiameter);
+
                 DbParameter prmiBuy_price = new SqlParameter();
-                prmiBuy_price.DbType = DbType.Int16;
+                prmiBuy_price.DbType = DbType.Decimal;
                 prmiBuy_price.ParameterName = "@iBuy_price";
                 prmiBuy_price.Value = iBuy_price;
                 prmiBuy_price.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmiBuy_price);
 
-                DbParameter prmbInActive = new SqlParameter();
-                prmbInActive.DbType = DbType.Boolean;
-                prmbInActive.ParameterName = "@bInActive";
-                prmbInActive.Value = bInActive;
-                prmbInActive.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmbInActive);
-            
+                DbParameter prmiDivNumber = new SqlParameter();
+                prmiDivNumber.DbType = DbType.Int32;
+                prmiDivNumber.ParameterName = "@iDivNumber";
+                prmiDivNumber.Value = iDivNumber;
+                prmiDivNumber.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiDivNumber);
+
                 SQLConexion conProxy = new SQLConexion();
-                if (conProxy.EjecutarDML(lstParametros, "dbo.sp_tblActive_Insert"))
+                if (conProxy.EjecutarDML(lstParametros, "dbo.sp_tblActives_Insert"))
                     return Convert.ToInt32(prmCod.Value);
                 return -1;
 
@@ -237,7 +241,7 @@ namespace CAD.DAO
             lstParametros.Add(prmId);
 
             SQLConexion conProxy = new SQLConexion();
-            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActive_SelectRow");
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActives_SelectRow");
         }
 
         public DataSet selectByName(string name)
@@ -252,24 +256,25 @@ namespace CAD.DAO
             lstParametros.Add(prmName);
 
             SQLConexion conProxy = new SQLConexion();
-            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActive_SelectByName");
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActives_SelectByName");
         }
 
         public DataSet selectAll()
         {
+            List<DbParameter> lstParametros = new List<DbParameter>();
             SQLConexion conProxy = new SQLConexion();
-            return conProxy.EjecutarConsulta(null, "dbo.sp_tblActive_SelectAll");
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActives_SelectAll");
         }
 
-        public bool Update(
+        public bool Update( 
             int iActive_id,
             string sActive_name,
-            string sStatus,
             int iSubFamily_id,
             int iProvider_id,
+            string sActive_desc,
             string sBarcode,
             DateTime dRegister_time,
-            int iUtilTime,
+            DateTime iUtilTime,
             string sBrand,
             string sModel,
             string sForm,
@@ -277,17 +282,17 @@ namespace CAD.DAO
             string sColor,
             string sCapacity,
             string sMaterial,
-            double iHeihgt,
-            double iWidth,
-            double iWide,
-            double iDiameter,
+            decimal iHeihgt,
+            decimal iWidth,
+            decimal iWide,
+            decimal iDiameter,
             string sUnit,
             int iDivNumber,
             string sAsign_type,
-            string sAcquisition_type,
+            string sAquisition_type,
             DateTime dtBuy_time,
-            double iBuy_price,
-            bool bInActive)
+            decimal iBuy_price,
+            bool sStatus)
             {
                 List<DbParameter> lstParametros = new List<DbParameter>();
 
@@ -298,19 +303,13 @@ namespace CAD.DAO
                 prmiActive_id.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmiActive_id);
 
+
                 DbParameter prmsActive_name = new SqlParameter();
                 prmsActive_name.DbType = DbType.String;
                 prmsActive_name.ParameterName = "@sActive_name";
                 prmsActive_name.Value = sActive_name;
                 prmsActive_name.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsActive_name);
-
-                DbParameter prmsStatus = new SqlParameter();
-                prmsStatus.DbType = DbType.Binary;
-                prmsStatus.ParameterName = "@sStatus";
-                prmsStatus.Value = sStatus;
-                prmsStatus.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmsStatus);
 
                 DbParameter prmiSubFamily_id = new SqlParameter();
                 prmiSubFamily_id.DbType = DbType.Int16;
@@ -332,20 +331,6 @@ namespace CAD.DAO
                 prmsBarcode.Value = sBarcode;
                 prmsBarcode.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsBarcode);
-
-                DbParameter prmdRegister_time = new SqlParameter();
-                prmdRegister_time.DbType = DbType.DateTime;
-                prmdRegister_time.ParameterName = "@dRegister_time";
-                prmdRegister_time.Value = dRegister_time;
-                prmdRegister_time.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmdRegister_time);
-
-                DbParameter prmiUtilTime = new SqlParameter();
-                prmiUtilTime.DbType = DbType.Int32;
-                prmiUtilTime.ParameterName = "@iUtilTime";
-                prmiUtilTime.Value = iUtilTime;
-                prmiUtilTime.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiUtilTime);
 
                 DbParameter prmsBrand = new SqlParameter();
                 prmsBrand.DbType = DbType.String;
@@ -396,47 +381,12 @@ namespace CAD.DAO
                 prmsMaterial.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsMaterial);
 
-                DbParameter prmiHeihgt = new SqlParameter();
-                prmiHeihgt.DbType = DbType.Int16;
-                prmiHeihgt.ParameterName = "@iHeihgt";
-                prmiHeihgt.Value = iHeihgt;
-                prmiHeihgt.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiHeihgt);
-
-                DbParameter prmiWidth = new SqlParameter();
-                prmiWidth.DbType = DbType.Int16;
-                prmiWidth.ParameterName = "@iWidth";
-                prmiWidth.Value = iWidth;
-                prmiWidth.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiWidth);
-
-                DbParameter prmiWide = new SqlParameter();
-                prmiWide.DbType = DbType.Int16;
-                prmiWide.ParameterName = "@iWide";
-                prmiWide.Value = iWide;
-                prmiWide.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiWide);
-
-                DbParameter prmiDiameter = new SqlParameter();
-                prmiDiameter.DbType = DbType.Int16;
-                prmiDiameter.ParameterName = "@iDiameter";
-                prmiDiameter.Value = iDiameter;
-                prmiDiameter.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiDiameter);
-
                 DbParameter prmsUnit = new SqlParameter();
                 prmsUnit.DbType = DbType.String;
                 prmsUnit.ParameterName = "@sUnit";
                 prmsUnit.Value = sUnit;
                 prmsUnit.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsUnit);
-
-                DbParameter prmiDivNumber = new SqlParameter();
-                prmiDivNumber.DbType = DbType.Int16;
-                prmiDivNumber.ParameterName = "@iDivNumber";
-                prmiDivNumber.Value = iDivNumber;
-                prmiDivNumber.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmiDivNumber);
 
                 DbParameter prmsAsign_type = new SqlParameter();
                 prmsAsign_type.DbType = DbType.String;
@@ -445,12 +395,40 @@ namespace CAD.DAO
                 prmsAsign_type.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmsAsign_type);
 
-                DbParameter prmsAcquisition_type = new SqlParameter();
-                prmsAcquisition_type.DbType = DbType.String;
-                prmsAcquisition_type.ParameterName = "@sAcquisition_type";
-                prmsAcquisition_type.Value = sAcquisition_type;
-                prmsAcquisition_type.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmsAcquisition_type);
+                DbParameter prmsAquisition_type = new SqlParameter();
+                prmsAquisition_type.DbType = DbType.String;
+                prmsAquisition_type.ParameterName = "@sAcquisition_type";
+                prmsAquisition_type.Value = sAquisition_type;
+                prmsAquisition_type.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsAquisition_type);
+
+                DbParameter prmsStatus = new SqlParameter();
+                prmsStatus.DbType = DbType.Boolean;
+                prmsStatus.ParameterName = "@sStatus";
+                prmsStatus.Value = sStatus;
+                prmsStatus.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsStatus);
+
+                DbParameter prmsActive_desc = new SqlParameter();
+                prmsActive_desc.DbType = DbType.String;
+                prmsActive_desc.ParameterName = "@sActive_desc";
+                prmsActive_desc.Value = sActive_desc;
+                prmsActive_desc.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmsActive_desc);
+
+                DbParameter prmdRegister_time = new SqlParameter();
+                prmdRegister_time.DbType = DbType.DateTime;
+                prmdRegister_time.ParameterName = "@dRegister_time";
+                prmdRegister_time.Value = dRegister_time;
+                prmdRegister_time.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmdRegister_time);
+
+                DbParameter prmiUtilTime = new SqlParameter();
+                prmiUtilTime.DbType = DbType.DateTime;
+                prmiUtilTime.ParameterName = "@iUtilTime";
+                prmiUtilTime.Value = iUtilTime;
+                prmiUtilTime.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiUtilTime);
 
                 DbParameter prmdtBuy_time = new SqlParameter();
                 prmdtBuy_time.DbType = DbType.DateTime;
@@ -459,19 +437,49 @@ namespace CAD.DAO
                 prmdtBuy_time.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmdtBuy_time);
 
+                DbParameter prmiHeihgt = new SqlParameter();
+                prmiHeihgt.DbType = DbType.Decimal;
+                prmiHeihgt.ParameterName = "@iHeihgt";
+                prmiHeihgt.Value = iHeihgt;
+
+                prmiHeihgt.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiHeihgt);
+
+                DbParameter prmiWidth = new SqlParameter();
+                prmiWidth.DbType = DbType.Decimal;
+                prmiWidth.ParameterName = "@iWidth";
+                prmiWidth.Value = iWidth;
+                prmiWidth.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiWidth);
+
+                DbParameter prmiWide = new SqlParameter();
+                prmiWide.DbType = DbType.Decimal;
+                prmiWide.ParameterName = "@iWide";
+                prmiWide.Value = iWide;
+                prmiWide.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiWide);
+
+                DbParameter prmiDiameter = new SqlParameter();
+                prmiDiameter.DbType = DbType.Decimal;
+                prmiDiameter.ParameterName = "@iDiameter";
+                prmiDiameter.Value = iDiameter;
+                prmiDiameter.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiDiameter);
+
                 DbParameter prmiBuy_price = new SqlParameter();
-                prmiBuy_price.DbType = DbType.Int16;
+                prmiBuy_price.DbType = DbType.Decimal;
                 prmiBuy_price.ParameterName = "@iBuy_price";
                 prmiBuy_price.Value = iBuy_price;
                 prmiBuy_price.Direction = ParameterDirection.Input;
                 lstParametros.Add(prmiBuy_price);
 
-                DbParameter prmbInActive = new SqlParameter();
-                prmbInActive.DbType = DbType.Boolean;
-                prmbInActive.ParameterName = "@bInActive";
-                prmbInActive.Value = bInActive;
-                prmbInActive.Direction = ParameterDirection.Input;
-                lstParametros.Add(prmbInActive);
+                DbParameter prmiDivNumber = new SqlParameter();
+                prmiDivNumber.DbType = DbType.Int32;
+                prmiDivNumber.ParameterName = "@iDivNumber";
+                prmiDivNumber.Value = iDivNumber;
+                prmiDivNumber.Direction = ParameterDirection.Input;
+                lstParametros.Add(prmiDivNumber);
+
             
                 SQLConexion conProxy=new SQLConexion();
                 return conProxy.EjecutarDML(lstParametros, "dbo.sp_tblActives_Update");
@@ -491,5 +499,21 @@ namespace CAD.DAO
             SQLConexion conProxy = new SQLConexion();
             return conProxy.EjecutarDML(lstParametros, "dbo.sp_tblActives_DeleteRow");
         }
+
+        public DataSet TraerXId(int codigo)
+        {
+            List<DbParameter> lstParametros = new List<DbParameter>();
+
+            DbParameter prmA = new SqlParameter();
+            prmA.DbType = DbType.Int32;
+            prmA.ParameterName = "@iActive_id";
+            prmA.Value = codigo;
+            prmA.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmA);
+
+            SQLConexion conProxy = new SQLConexion();
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblActives_SelectRow");
+        } 
+
     }
 }
