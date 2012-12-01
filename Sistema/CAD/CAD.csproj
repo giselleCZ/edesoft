@@ -78,8 +78,6 @@
     <Compile Include="DAO\DAOResponsible.cs" />
     <Compile Include="DAO\DAOActive.cs" />
     <Compile Include="DAO\DAOEmpleado.cs" />
-    <Compile Include="DAO\DAOProvider.cs" />
-    <Compile Include="DAO\DAOProviderType.cs" />
     <Compile Include="IConexion.cs" />
     <Compile Include="OleDbConexion.cs" />
     <Compile Include="SQLConexion.cs" />

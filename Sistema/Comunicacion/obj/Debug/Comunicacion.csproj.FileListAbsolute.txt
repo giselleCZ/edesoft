@@ -28,3 +28,8 @@ C:\soft\Sistema\Comunicacion\bin\Debug\Comunicacion.pdb
 C:\soft\Sistema\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
 C:\soft\Sistema\Comunicacion\obj\Debug\Comunicacion.dll
 C:\soft\Sistema\Comunicacion\obj\Debug\Comunicacion.pdb
+C:\soft3\Sistema\Comunicacion\bin\Debug\Comunicacion.dll
+C:\soft3\Sistema\Comunicacion\bin\Debug\Comunicacion.pdb
+C:\soft3\Sistema\Comunicacion\obj\Debug\ResolveAssemblyReference.cache
+C:\soft3\Sistema\Comunicacion\obj\Debug\Comunicacion.dll
+C:\soft3\Sistema\Comunicacion\obj\Debug\Comunicacion.pdb
