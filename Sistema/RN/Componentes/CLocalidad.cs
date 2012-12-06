@@ -109,7 +109,7 @@ namespace RN.Componentes
             objProxy.Ilocacion_id = Convert.ToInt32(fila["iLocation_id"]);
             objProxy.Slocacion_nm = fila["sLocation_name"].ToString();
             objProxy.Slocacion_desc = fila["sLocation_desc"].ToString();
-            objProxy.Sstado = Convert.ToBoolean(fila["sStatus"]);
+            objProxy.Sstado = Convert.ToBoolean(fila["SStatus"]);
             objProxy.Isubarea = Convert.ToInt32(fila["iSubArea_id"]);
           //  objProxy.Subarea = fila["sSubArea_name"].ToString();
             return objProxy;

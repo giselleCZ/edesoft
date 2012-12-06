@@ -12,11 +12,11 @@ namespace RN.Componentes
         public static int Insert(clsActive objProxy)
         {
             ValidationException x = new ValidationException();
-            if (string.IsNullOrEmpty(objProxy.SActive_name))
-                x.AgregarError("Ingrese el nombre del Activo");
+            //if (string.IsNullOrEmpty(objProxy.SActive_name))
+            //    x.AgregarError("Ingrese el nombre del Activo");
 
-            if (x.Cantidad > 0)
-                throw x;
+            //if (x.Cantidad > 0)
+            //    throw x;
 
             DAOActive daoProxy = new DAOActive();
             return daoProxy.Insert(objProxy.SActive_name, 

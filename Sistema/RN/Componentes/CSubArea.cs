@@ -77,9 +77,9 @@ namespace RN.Componentes
             SubArea objProxy = new SubArea();
             objProxy.ISubArea_id = Convert.ToInt32(fila["iSubArea_id"]);
             objProxy.SSubArea_name = fila["sSubArea_name"].ToString();
-            //objProxy.SSubArea_desc = fila["sSubArea_desc"].ToString();
-            //objProxy.BStatus = Convert.ToBoolean(fila["bStatus"]);
-            //objProxy.IArea_id = Convert.ToInt32(fila["sProvider_email"]);
+            objProxy.SSubArea_desc = fila["sSubArea_desc"].ToString();
+            objProxy.BStatus = Convert.ToBoolean(fila["bStatus"]);
+            objProxy.IArea_id = Convert.ToInt32(fila["iArea_id"]);
             
             return objProxy;
         }
