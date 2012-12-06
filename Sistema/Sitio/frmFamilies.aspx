@@ -34,7 +34,7 @@
 &nbsp;&nbsp;
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" 
                 onclick="btnBuscar_Click" />
-            <asp:Panel ID="pnlNuevo" runat="server">
+         <asp:Panel ID="pnlNuevo" runat="server">
             <table style="width:100%;">
                 <tr>
                     <td class="style3">
