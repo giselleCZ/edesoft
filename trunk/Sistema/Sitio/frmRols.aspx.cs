@@ -13,6 +13,9 @@ namespace Sitio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["usuario"] == null)
+                Response.Redirect("frmLogin.aspx");
+
             if (!IsPostBack)
             {
 
