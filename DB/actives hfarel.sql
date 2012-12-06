@@ -539,3 +539,100 @@ Begin
 
 End
 GO
+
+
+-- /*******************CONT CENTER RESPONSIBLES ******************************/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tblPeopleCostCenters](
+	[iPercent] [smallint] NOT NULL,
+	[iCostCenter_id] [dbo].[IntKey] NOT NULL,
+	[dtAsign_time] [dbo].[dateNormal] NULL,
+	[iPerson_id] [dbo].[IntKey] NOT NULL,
+ CONSTRAINT [XPKtblPeopleCostCenters] PRIMARY KEY CLUSTERED 
+(
+	[iPerson_id] ASC,
+	[iCostCenter_id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[tblPeopleCostCenters] ([iPercent], [iCostCenter_id], [iPerson_id], [dtAsign_time]) VALUES (100, 1, 1,NULL)
+INSERT [dbo].[tblPeopleCostCenters] ([iPercent], [iCostCenter_id], [iPerson_id], [dtAsign_time]) VALUES (50, 2, 1,NULL)
+INSERT [dbo].[tblPeopleCostCenters] ([iPercent], [iCostCenter_id], [iPerson_id], [dtAsign_time]) VALUES (50, 2, 2,NULL)
+GO
+Create Procedure [dbo].[sp_tblPeopleCostCenters_SelectAll]
+As
+Begin
+	Select 
+		[iPercent],
+		[iCostCenter_id],
+		[dtAsign_time],
+		[iPerson_id]
+	From tblPeopleCostCenters
+End
+GO
+Create Procedure [dbo].[sp_tblPeopleCostCenters_SelectRow]
+	@iCostCenter_id smallint,
+	@iPerson_id smallint
+As
+Begin
+	Select 
+		[iPercent],
+		[iCostCenter_id],
+		[dtAsign_time],
+		[iPerson_id]
+	From tblPeopleCostCenters
+	Where
+		[iCostCenter_id] = @iCostCenter_id
+		and [iPerson_id] = @iPerson_id
+End
+GO
+Create Procedure [dbo].[sp_tblPeopleCostCenters_Insert]
+	@iPercent smallint,
+	@iCostCenter_id smallint,
+	@dtAsign_time datetime = NULL,
+	@iPerson_id smallint
+As
+Begin
+	Insert Into tblPeopleCostCenters
+		([iPercent],[iCostCenter_id],[dtAsign_time],[iPerson_id])
+	Values
+		(@iPercent,@iCostCenter_id,@dtAsign_time,@iPerson_id)
+
+End
+GO
+Create Procedure [dbo].[sp_tblPeopleCostCenters_DeleteRow]
+	@iCostCenter_id smallint,
+	@iPerson_id smallint
+As
+Begin
+	Delete tblPeopleCostCenters
+	Where
+		[iCostCenter_id] = @iCostCenter_id
+		and [iPerson_id] = @iPerson_id
+
+End
+GO
+Create Procedure [dbo].[sp_tblPeopleCostCenters_Update]
+	@iPercent smallint,
+	@iCostCenter_id smallint,
+	@dtAsign_time datetime,
+	@iPerson_id smallint
+As
+Begin
+	Update tblPeopleCostCenters
+	Set
+		[iPercent] = @iPercent,
+		[dtAsign_time] = @dtAsign_time
+	Where		
+		[iCostCenter_id] = @iCostCenter_id
+		and [iPerson_id] = @iPerson_id
+
+End
+GO
