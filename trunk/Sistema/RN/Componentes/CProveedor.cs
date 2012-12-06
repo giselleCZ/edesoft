@@ -14,26 +14,26 @@ namespace RN.Componentes
         public static int Insertar(Proveedor objProxy)
         {
             ValidationException x = new ValidationException();
-            if (string.IsNullOrEmpty(objProxy.SProvider_name))
-                x.AgregarError("Ingrese el nombre del empleado");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_name))
+            //    x.AgregarError("Ingrese el nombre del empleado");
 
-            if (string.IsNullOrEmpty(objProxy.SProvider_rs))
-                x.AgregarError("Ingrese el nombre del rs?");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_rs))
+            //    x.AgregarError("Ingrese el nombre del rs?");
             
-            if (string.IsNullOrEmpty(objProxy.SProvider_phone))
-                x.AgregarError("Ingrese el nombre del telefono");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_phone))
+            //    x.AgregarError("Ingrese el nombre del telefono");
 
-            if (string.IsNullOrEmpty(objProxy.SProvider_email))
-                x.AgregarError("Ingrese el nombre del correo");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_email))
+            //    x.AgregarError("Ingrese el nombre del correo");
 
-            if (string.IsNullOrEmpty(objProxy.SProvider_desc))
-                x.AgregarError("Ingrese el nombre del descripcion");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_desc))
+            //    x.AgregarError("Ingrese el nombre del descripcion");
 
-            if (string.IsNullOrEmpty(objProxy.SProvider_address))
-                x.AgregarError("Ingrese el nombre del direccion");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_address))
+            //    x.AgregarError("Ingrese el nombre del direccion");
 
-            if (x.Cantidad > 0)
-                throw x;
+            //if (x.Cantidad > 0)
+            //    throw x;
 
           DAOProveedor daoProxy = new DAOProveedor();
             return daoProxy.Insertar(objProxy.SProvider_name,objProxy.SProvider_rs,objProxy.SProvider_phone, objProxy.SProvider_email,objProxy.SProvider_desc,objProxy.SProvider_address);
@@ -57,10 +57,10 @@ namespace RN.Componentes
             if (string.IsNullOrEmpty(objProxy.SProvider_email))
                 x.AgregarError("Ingrese el nombre del correo");
 
-            if (string.IsNullOrEmpty(objProxy.SProvider_desc))
-                x.AgregarError("Ingrese el nombre del descripcion");
-                        if (string.IsNullOrEmpty(objProxy.SProvider_address))
-                x.AgregarError("Ingrese el nombre del direccion");
+            //if (string.IsNullOrEmpty(objProxy.SProvider_desc))
+            //    x.AgregarError("Ingrese el nombre del descripcion");
+            //            if (string.IsNullOrEmpty(objProxy.SProvider_address))
+            //    x.AgregarError("Ingrese el nombre del direccion");
 
             if (x.Cantidad > 0)
                 throw x;
@@ -121,10 +121,13 @@ namespace RN.Componentes
         }
 
 
+
+
+
         private static Proveedor Cargar(DataRow fila)
         {
             Proveedor objProxy = new Proveedor();
-            objProxy.IProvider_id = Convert.ToInt32(fila["iProvider_id"]);
+            objProxy.IProvider_id = Convert.ToInt32(fila["IProvider_id"]);
             objProxy.SProvider_name = fila["sProvider_name"].ToString();
             objProxy.SProvider_rs = fila["sProvider_rs"].ToString();
             objProxy.SProvider_phone = fila["sProvider_phone"].ToString();

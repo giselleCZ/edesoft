@@ -14,6 +14,9 @@ namespace Sitio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["usuario"] == null)
+                Response.Redirect("frmLogin.aspx");
+
             if (!IsPostBack)
             {
                 pnlBuscar.Visible = false;
@@ -23,6 +26,8 @@ namespace Sitio
                 LoadActives();
                 txtdRegister_time.Text = DateTime.Now.ToString();
 
+                // eventosdate();
+
             }
         }
         public void LoadActives()
@@ -31,6 +36,7 @@ namespace Sitio
             grdActives.DataSource = obj;
             grdActives.DataBind();
         }
+
 
         public string getActive(int iActive)
         {
@@ -47,6 +53,7 @@ namespace Sitio
             RN.Entidades.clsSubFamilies Family = CSubFamilies.SelectRow(iFamily);
             return Family.SSubFamily_name;
         }
+
         public string getSubFamily(int iFamily)
         {
             RN.Entidades.clsSubFamilies Family = CSubFamilies.SelectRow(iFamily);
@@ -67,7 +74,7 @@ namespace Sitio
         public string getProveedor(object objProveedor)
         {
             int iResp = Convert.ToInt32(DataBinder.Eval(objProveedor, "IActive_id"));
-            clsActive prov = CActive.SelectRow(iResp);  
+            clsActive prov = CActive.SelectRow(iResp);
             int iprov = prov.IProvider_id.IProvider_id;  /// esperar
             RN.Entidades.Proveedor prove = CProveedor.TraerXId(iprov);
             return prove.SProvider_name;
@@ -80,15 +87,31 @@ namespace Sitio
             return prove.SProvider_name;
         }
 
-        public void loadProveedor(int prove)
+
+        public string getestado(object objsub)
         {
-            List<RN.Entidades.Proveedor> objFamily = CProveedor.Traer();
-            ddlProveedor.DataSource = objFamily;
-            ddlProveedor.DataTextField = "SProvider_name";
-            ddlProveedor.DataValueField = "IProvider_id";
-            SetDDLs(ddlProveedor, getSubFamily(prove));
-            ddlProveedor.DataBind();
+            int isub = Convert.ToInt32(DataBinder.Eval(objsub, "IActive_id"));
+            RN.Entidades.clsActive loc = CActive.SelectRow(isub);
+            int isuba = Convert.ToInt32(loc.SStatus);
+            RN.Entidades.clsEstado sub = CEstado.SelectRow(isuba);
+            return sub.SEstado;
         }
+
+        public string getestado(int iEstado)
+        {
+            RN.Entidades.clsEstado sub = CEstado.SelectRow(iEstado);
+            return sub.SEstado;
+        }
+
+        //public void loadProveedor(int prove)
+        //{
+        //    List<RN.Entidades.Proveedor> objFamily = CProveedor.Traer();
+        //    ddlProveedor.DataSource = objFamily;
+        //    ddlProveedor.DataTextField = "SProvider_name";
+        //    ddlProveedor.DataValueField = "IProvider_id";
+        //    SetDDLs(ddlProveedor, getSubFamily(prove));
+        //    ddlProveedor.DataBind();
+        //}
 
         private void SetDDLs(DropDownList d, string val)
         {
@@ -111,7 +134,7 @@ namespace Sitio
             ddlProveedor.DataTextField = "SProvider_name";
             ddlProveedor.DataValueField = "IProvider_id";
             ddlProveedor.DataBind();
-            this.ddlProveedor.Items.Insert(0, new ListItem("Elija Proveedor", "0"));
+         
         }
 
 
@@ -137,7 +160,6 @@ namespace Sitio
 
         protected void btGuardar_Click(object sender, EventArgs e)
         {
-        
             clsActive active = new clsActive();
             active.SActive_name = txtsActive_name.Text;
             RN.Entidades.clsSubFamilies sub = CSubFamilies.SelectRow(Convert.ToInt32(ddSubFamilia.SelectedValue));
@@ -150,11 +172,18 @@ namespace Sitio
             active.SBarCode = txtsBarcode.Text;
 
             ///----------fecha actual
-            txtdRegister_time.Text = DateTime.Now.ToString();
+            txtdRegister_time.Text = DateTime.Now.ToShortDateString();
             active.DRegister_time = Convert.ToDateTime(txtdRegister_time.Text);
             ///--------------------
 
-            active.IUtilTime = Convert.ToDateTime(txtiUtilTime.Text);
+            RN.Entidades.clsSubFamilies idsf = CSubFamilies.SelectRow(Convert.ToInt32(ddSubFamilia.SelectedValue));
+            RN.Entidades.clsFamilies idf = idsf.IFamily_id;
+
+            int xz = idf.IDepreciation_time;
+
+            //DateTime.Now.AddMonths(x).ToLongDateString();
+            //active.IUtilTime =Convert.ToDateTime(); //esta bien colocarlo
+             active.IUtilTime = Convert.ToDateTime(txtiUtilTime.Text); 
             active.SBrand = txtsBrand.Text;
             active.SModel = txtsModel.Text;
             active.SForm = txtsForm.Text;
@@ -162,10 +191,9 @@ namespace Sitio
             active.SColor = txtsColor.Text;
             active.SCapacity = txtsCapacity.Text;
             active.SMaterial = txtsMaterial.Text;
-            
-            
-           //------------heihgt
-            string sh=(txtiHeihgt.Text);
+
+            //------------heihgt
+            string sh = (txtiHeihgt.Text);
             double val = Convert.ToDouble(sh, CultureInfo.CreateSpecificCulture("en-US"));
             decimal x = Convert.ToDecimal(val);
             active.IHeihgt = (x);
@@ -196,10 +224,27 @@ namespace Sitio
             active.SAsign_Type = txtsAsign_type.Text;
             active.SAquisition_Type = txtsAdquisition_type.Text;
             active.DtBuy_time = Convert.ToDateTime(txtdtBuy_time.Text);
-           
+
             int ss = Convert.ToInt32(ddlEstado.SelectedValue.ToString());
             active.SStatus = Convert.ToBoolean(ss);
 
+            //--------------------------------
+            DateTime desde = Convert.ToDateTime(txtdRegister_time.Text);   //desde
+            //DateTime hasta = Convert.ToDateTime(txtiUtilTime.Text); // hasta
+
+            ///////si la registro  es mayor a la fecha limite
+            //if (Convert.ToInt32(desde) > Convert.ToInt32(hasta))
+            //{
+            //    this.txtiUtilTime.Text = "";
+            //}
+            /// si la compra la compra es mayor que el registro limpiar el campo
+            //DateTime compra = Convert.ToDateTime(txtdtBuy_time.Text);
+            //if (Convert.ToInt32(desde) <= Convert.ToInt32(compra))
+            //{
+            //    this.txtdtBuy_time.Text = "";
+            //}
+
+            ///-------------------
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 int iActive = CActive.Insert(active);
@@ -247,8 +292,8 @@ namespace Sitio
             txtsModel.Text = "";
             txtsSerialNumber.Text = "";
             txtsUnit.Text = "";
-            
-         }
+
+        }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -285,8 +330,8 @@ namespace Sitio
                 txtsSerialNumber.Text = active.SSerialNumber.ToString();
                 txtsUnit.Text = active.SUnit.ToString();
                 ///-------------------
-                txtiDiameter.Text =  Convert.ToString(active.IDiameter.ToString()).Replace(",", ".");
-                txtiWide.Text =  Convert.ToString(active.IWide.ToString()).Replace(",", ".");
+                txtiDiameter.Text = Convert.ToString(active.IDiameter.ToString()).Replace(",", ".");
+                txtiWide.Text = Convert.ToString(active.IWide.ToString()).Replace(",", ".");
                 txtiWidth.Text = Convert.ToString(active.IWidth.ToString()).Replace(",", ".");
                 txtiHeihgt.Text = Convert.ToString(active.IHeihgt.ToString()).Replace(",", ".");
                 txtiBuy_price.Text = Convert.ToString(active.IBuy_price.ToString()).Replace(",", ".");
@@ -295,6 +340,7 @@ namespace Sitio
                 this.ddSubFamilia.SelectedValue = Convert.ToString(active.ISubFamily_id.ISubFamily_id);
                 this.ddlEstado.SelectedIndex = Convert.ToInt32(active.SStatus);
                 pnlNuevo.Visible = true;
+                pnlBuscar.Visible = false;
                
             }
             else
@@ -308,6 +354,35 @@ namespace Sitio
 
         }
 
-            
+        //protected void ddSubFamilia_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+
+        //    this.txtiUtilTime.Text = "";
+        //    RN.Entidades.clsSubFamilies sub = CSubFamilies.SelectRow(Convert.ToInt32(ddSubFamilia.SelectedValue));
+        //    RN.Entidades.clsFamilies sub1 = CFamilies.SelectRow(sub.IFamily_id.IFamily_id);
+        //    int sver = Convert.ToInt32(sub1.IDepreciation_time);
+        //    this.txtiUtilTime.Text = (DateTime.Now.AddMonths(sver).ToLongDateString());
+
+
+        //}
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            //this.txtiUtilTime.Text= Validate.
+            this.txtiUtilTime.Text = "";
+            RN.Entidades.clsSubFamilies sub = CSubFamilies.SelectRow(Convert.ToInt32(ddSubFamilia.SelectedValue));
+            RN.Entidades.clsFamilies sub1 = CFamilies.SelectRow(sub.IFamily_id.IFamily_id);
+            int sver = Convert.ToInt32(sub1.IDepreciation_time);
+            string dt = DateTime.Now.AddMonths(sver).ToShortDateString();
+            this.txtiUtilTime.Text = dt;
+
+        }
+
+        //protected void txtiHeihgt_TextChanged(object sender, EventArgs e)
+        //{
+
+
+
+        //}
     }
 }
