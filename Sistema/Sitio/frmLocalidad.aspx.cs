@@ -9,7 +9,7 @@ using RN.Componentes;
 
 namespace Sitio
 {
-    public partial class Localidad : System.Web.UI.Page
+    public partial class frmLocalidad : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

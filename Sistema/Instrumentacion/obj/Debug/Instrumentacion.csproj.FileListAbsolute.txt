@@ -38,3 +38,8 @@ C:\soft3\Sistema\Instrumentacion\bin\Debug\Instrumentacion.pdb
 C:\soft3\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
 C:\soft3\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
 C:\soft3\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\Instrumentacion\bin\Debug\Instrumentacion.dll
+D:\u\softIII\Proyecto\trunk\Sistema\Instrumentacion\bin\Debug\Instrumentacion.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\Instrumentacion\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\trunk\Sistema\Instrumentacion\obj\Debug\Instrumentacion.dll
+D:\u\softIII\Proyecto\trunk\Sistema\Instrumentacion\obj\Debug\Instrumentacion.pdb

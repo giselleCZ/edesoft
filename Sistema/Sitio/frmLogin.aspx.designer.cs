@@ -13,6 +13,15 @@ namespace Sitio {
     public partial class frmLogin {
         
         /// <summary>
+        /// Control Head1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        
+        /// <summary>
         /// Control form1.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Sitio {
         protected global::System.Web.UI.WebControls.Panel pnlNuevo;
         
         /// <summary>
+        /// Control erroru.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label erroru;
+        
+        /// <summary>
         /// Control txtUser.
         /// </summary>
         /// <remarks>
@@ -47,6 +65,15 @@ namespace Sitio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPass;
+        
+        /// <summary>
+        /// Control errorp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorp;
         
         /// <summary>
         /// Control btnEntrar.

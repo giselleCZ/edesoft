@@ -54,3 +54,10 @@ C:\soft3\Sistema\RN\bin\Debug\RN.dll
 C:\soft3\Sistema\RN\bin\Debug\RN.pdb
 C:\soft3\Sistema\RN\bin\Debug\CAD.dll
 C:\soft3\Sistema\RN\bin\Debug\CAD.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\RN\bin\Debug\RN.dll
+D:\u\softIII\Proyecto\trunk\Sistema\RN\bin\Debug\RN.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\RN\bin\Debug\CAD.dll
+D:\u\softIII\Proyecto\trunk\Sistema\RN\bin\Debug\CAD.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\RN\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\trunk\Sistema\RN\obj\Debug\RN.dll
+D:\u\softIII\Proyecto\trunk\Sistema\RN\obj\Debug\RN.pdb

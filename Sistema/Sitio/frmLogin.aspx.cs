@@ -13,31 +13,35 @@ namespace Sitio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-                
-            //}
+            erroru.Visible = false;
+            errorp.Visible = false;
         }
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
-            clsResponsible resp = CResponsible.SelectRow(Convert.ToInt32(txtUser.Text));
+            erroru.Text = "";
+            errorp.Text = "";
+            erroru.Visible = false;
+            errorp.Visible = false;
+            clsResponsible resp = CResponsible.SelectByUsername(txtUser.Text);
             if (resp != null)
             {
                 if (resp.SPassword == txtPass.Text)
                 {
                     Response.Redirect("main.htm");
-                    Session["user"] = "Autenticado";
+                    Session["usuario"] = "Autenticado";
                     Session["rol"] = "Administrador";
-					
                 }
                 else
                 {
-                    txtUser.Text = "Verifique su Contraseña";
+                    errorp.Text = "Verifique su Contraseña";
+                    errorp.Visible = true;
+                    txtPass.Text = "";
                 }
             }
             else
             {
-                txtUser.Text = "usuario no encontrado";
+                erroru.Visible = true;
+                erroru.Text = "usuario no encontrado";
             }
         }
     }

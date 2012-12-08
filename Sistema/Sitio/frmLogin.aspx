@@ -1,5 +1,4 @@
-<<<<<<< .mine
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="Sitio.frmLogin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="Sitio.frmLogin" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -22,14 +21,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <strong>AutenticaciÃ³n de Usuarios</strong> <br />
+            <strong>Autenticación de Usuarios</strong> <br />
             <asp:Panel ID="pnlNuevo" runat="server">
             <table style="width:100%;">
                 <tr>
                     <td class="style3">
                         </td>
                     <td>
-                        <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="erroru" runat="server" Text="Label" CssClass="error"></asp:Label>
                     </td>
                     <td>
                         &nbsp;</td>
@@ -45,11 +44,11 @@
                 </tr>
                 <tr>
                     <td class="style3">
-                        ContraseÃ±a:</td>
+                        Contraseña:</td>
                     <td>
-                        <asp:TextBox ID="txtPass" runat="server" Width="250px"></asp:TextBox>
+                        <asp:TextBox ID="txtPass" runat="server" Width="250px" TextMode="Password"></asp:TextBox>
                     </td>
-                    <td>
+                    <td><asp:Label ID="errorp" runat="server" Text="Label" CssClass="error"></asp:Label>
                         &nbsp;</td>
                 </tr>
                  <tr>
@@ -68,33 +67,3 @@
     </form>
 </body>
 </html>
-=======
-<<<<<<< .mine
-ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmLogin.aspx.cs" Inherits="Sitio.frmLogin" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-                        Contraseña:</td>
-                    <td>
-                        <asp:TextBox ID="txtPass" runat="server" Width="250px"></asp:TextBox>
-                    </td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-                 <tr>
-                    <td class="style3">
-                        &nbsp;</td>
-                    <td>
-                        <asp:Button ID="btnEntrar" runat="server" onclick="btnEntrar_Click" 
-                            Text="Guardar" />
-                    </td>
-                    <td>
-                        &nbsp;</td>
-                </tr>
-            </table>
-        </asp:Panel>
-        </div>
-    </form>
-</body>
->>>>>>> .r67

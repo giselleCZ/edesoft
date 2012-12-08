@@ -1150,3 +1150,32 @@ End
 
   insert into tblestado(estado_id,estado) values(0,'Habilitad')
   insert into tblestado(estado_id,estado) values(1,'Deshabilitad')
+
+/****PROVEEDORES*****/
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create Procedure [dbo].[sp_tblResponsibles_SelectByUsername]
+	@sUsername varchar(20)
+As
+Begin
+	Select 
+		[iPerson_id],
+		[sPerson_name],
+		[sPerson_lname],
+		[sPerson_dni],
+		[sPerson_phone],
+		[sPerson_email],
+		[sUsername],
+		[sPassword],
+		[iRol_id],
+		[dtStart_time],
+		[dtEnd_time]
+	From tblResponsibles
+	Where
+		[sUsername] LIKE @sUsername
+End
