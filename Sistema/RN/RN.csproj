@@ -69,6 +69,7 @@
     <Compile Include="Componentes\CActive.cs" />
     <Compile Include="Componentes\CAsigResponsibleActive.cs" />
     <Compile Include="Componentes\CCostCenter.cs" />
+    <Compile Include="Componentes\CEstado.cs" />
     <Compile Include="Componentes\CFamilies.cs" />
     <Compile Include="Componentes\CLocalidad.cs" />
     <Compile Include="Componentes\CProveedor.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Componentes\CRol.cs" />
     <Compile Include="Componentes\CResponsible.cs" />
     <Compile Include="Entidades\clsCostCenter.cs" />
+    <Compile Include="Entidades\clsEstado.cs" />
     <Compile Include="Entidades\clsRevalue.cs" />
     <Compile Include="Entidades\clsFamilies.cs" />
     <Compile Include="Entidades\clsResponsible.cs" />
