@@ -66,3 +66,12 @@ C:\soft\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
 C:\soft3\Sistema\Sitio\obj\Debug\ResolveAssemblyReference.cache
 C:\soft3\Sistema\Sitio\obj\Debug\Sitio.dll
 C:\soft3\Sistema\Sitio\obj\Debug\Sitio.pdb
+C:\soft3\Sistema\Sitio\bin\Sitio.dll
+C:\soft3\Sistema\Sitio\bin\Sitio.pdb
+C:\soft3\Sistema\Sitio\bin\Instrumentacion.dll
+C:\soft3\Sistema\Sitio\bin\RN.dll
+C:\soft3\Sistema\Sitio\bin\log4net.dll
+C:\soft3\Sistema\Sitio\bin\CAD.dll
+C:\soft3\Sistema\Sitio\bin\Instrumentacion.pdb
+C:\soft3\Sistema\Sitio\bin\RN.pdb
+C:\soft3\Sistema\Sitio\bin\CAD.pdb
