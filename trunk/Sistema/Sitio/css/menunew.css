@@ -71,6 +71,8 @@ body{
 	margin-left: 16px;
 	margin-top: 6px;
 	position: absolute;
+    top: 25px;
+    left: 504px;
 }
 .error:before{
 	content: '';

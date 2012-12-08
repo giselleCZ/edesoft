@@ -142,6 +142,21 @@ namespace CAD.DAO
             return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblResponsibles_SelectByLName");
         }
 
+        public DataSet selectByUsername(string usrnm)
+        {
+            List<DbParameter> lstParametros = new List<DbParameter>();
+
+            DbParameter prmId = new SqlParameter();
+            prmId.DbType = DbType.String;
+            prmId.ParameterName = "@sUsername";
+            prmId.Value = usrnm;
+            prmId.Direction = ParameterDirection.Input;
+            lstParametros.Add(prmId);
+
+            SQLConexion conProxy = new SQLConexion();
+            return conProxy.EjecutarConsulta(lstParametros, "dbo.sp_tblResponsibles_SelectByUsername");
+        }
+
         public DataSet selectRow(int codigo)
         {
             List<DbParameter> lstParametros = new List<DbParameter>();

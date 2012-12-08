@@ -64,3 +64,11 @@ C:\soft3\Sistema\CAD\bin\Debug\CAD.pdb
 C:\soft3\Sistema\CAD\bin\Debug\Instrumentacion.dll
 C:\soft3\Sistema\CAD\bin\Debug\log4net.dll
 C:\soft3\Sistema\CAD\bin\Debug\Instrumentacion.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\bin\Debug\CAD.dll
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\bin\Debug\CAD.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\bin\Debug\Instrumentacion.dll
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\bin\Debug\log4net.dll
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\bin\Debug\Instrumentacion.pdb
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\obj\Debug\ResolveAssemblyReference.cache
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\obj\Debug\CAD.dll
+D:\u\softIII\Proyecto\trunk\Sistema\CAD\obj\Debug\CAD.pdb

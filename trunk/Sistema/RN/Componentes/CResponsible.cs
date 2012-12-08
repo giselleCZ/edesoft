@@ -66,8 +66,18 @@ namespace RN.Componentes
         {
             DAOResponsible daoProxy = new DAOResponsible();
             DataSet dtsProxy = daoProxy.selectRow(codigo);
+            if (dtsProxy.Tables[0].Rows.Count > 0)
+                return Load(dtsProxy.Tables[0].Rows[0]);
+            return null;
+        }
 
-            return Load(dtsProxy.Tables[0].Rows[0]);
+        public static clsResponsible SelectByUsername(string usrnm)
+        {
+            DAOResponsible daoProxy = new DAOResponsible();
+            DataSet dtsProxy = daoProxy.selectByUsername(usrnm);
+            if (dtsProxy.Tables[0].Rows.Count > 0)
+                return Load(dtsProxy.Tables[0].Rows[0]);
+            return null;
         }
 
         public static List<clsResponsible> SelectByName(string name)
@@ -116,7 +126,7 @@ namespace RN.Componentes
             //objProxy.IRol_id.IRol_id = Convert.ToInt32(fila["iRol_id"]);
             objProxy.DStart_time = Convert.ToDateTime(fila["dtStart_time"]);
             objProxy.DEnd_time = Convert.ToDateTime(fila["dtEnd_time"]);
-            objProxy.SStatus = Convert.ToInt32(fila["sStatus"]);
+            //objProxy.SStatus = Convert.ToInt32(fila["sStatus"]);
             
             return objProxy;
         }
