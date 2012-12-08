@@ -27,7 +27,7 @@ namespace Sitio
 
             foreach (RN.Entidades.Empleado empleado in lstEmpleados)
             {
-                lstResultado.Add(AjaxControlToolkit.AutoCompleteExtender.CreateAutoCompleteItem(empleado.Nombre.Trim(), empleado.Codigo.ToString()));
+               // lstResultado.Add(AjaxControlToolkit.AutoCompleteExtender.CreateAutoCompleteItem(empleado.Nombre.Trim(), empleado.Codigo.ToString()));
             }
             return lstResultado.ToArray();
         }

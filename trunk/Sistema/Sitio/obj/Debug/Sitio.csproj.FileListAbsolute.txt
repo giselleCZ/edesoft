@@ -52,7 +52,6 @@ C:\swiii-1\Sistema\Sitio\obj\Debug\Sitio.dll
 C:\swiii-1\Sistema\Sitio\obj\Debug\Sitio.pdb
 D:\IS3-Project\Sistema\Sitio\bin\Sitio.dll
 D:\IS3-Project\Sistema\Sitio\bin\Sitio.pdb
-D:\IS3-Project\Sistema\Sitio\bin\AjaxControlToolkit.dll
 D:\IS3-Project\Sistema\Sitio\bin\Instrumentacion.dll
 D:\IS3-Project\Sistema\Sitio\bin\RN.dll
 D:\IS3-Project\Sistema\Sitio\bin\log4net.dll
