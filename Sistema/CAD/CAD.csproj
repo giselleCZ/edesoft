@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DAOCostCenter.cs" />
+    <Compile Include="DAO\DAOEstado.cs" />
     <Compile Include="DAO\DAOLocalidad.cs" />
     <Compile Include="DAO\DAOProveedor.cs" />
     <Compile Include="DAO\DAOSubArea.cs" />
