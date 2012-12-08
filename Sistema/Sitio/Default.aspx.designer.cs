@@ -28,7 +28,7 @@ namespace Sitio {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager scrManager;
+     //   protected global::AjaxControlToolkit.ToolkitScriptManager scrManager;
         
         /// <summary>
         /// Control hdnCodigoEmpleado.
@@ -208,7 +208,7 @@ namespace Sitio {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender aceEmpleado_B;
+       // protected global::AjaxControlToolkit.AutoCompleteExtender aceEmpleado_B;
         
         /// <summary>
         /// Control btnEmpleado_B.
