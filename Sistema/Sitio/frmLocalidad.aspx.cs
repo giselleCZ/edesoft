@@ -13,8 +13,8 @@ namespace Sitio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.Session["usuario"] == null)
-                Response.Redirect("frmLogin.aspx");
+            //if (this.Session["usuario"] == null)
+            //    Response.Redirect("frmLogin.aspx");
             if (!IsPostBack)
             {
                 this.Panel1.Visible = false;
@@ -169,7 +169,7 @@ namespace Sitio
 
                 pnlPrincipal.Visible = true;
                 this.Panel1.Visible = false;
-                gridloc.Enabled = false;
+             //   gridloc.Enabled = false;
                 cargarLocalidad();
 
             }

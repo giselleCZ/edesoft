@@ -14,8 +14,8 @@ namespace Sitio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (this.Session["usuario"] == null)
-                Response.Redirect("frmLogin.aspx");
+            //if (this.Session["usuario"] == null)
+            //    Response.Redirect("frmLogin.aspx");
 
             if (!IsPostBack)
             {
@@ -249,14 +249,18 @@ namespace Sitio
             {
                 int iActive = CActive.Insert(active);
                 txtCodigo.Text = iActive.ToString();
-                pnlBuscar.Visible = true;
+                limpiar();
+                //pnlBuscar.Visible = true;
+                //pnlNuevo.Visible = true;
+                //grdActives.Enabled = true;
                 LoadActives();
-                grdActives.Enabled = true;
             }
             else
             {
                 active.IActive_id = Convert.ToInt32(txtCodigo.Text);
                 CActive.Update(active);
+                pnlBuscar.Visible = true;
+                pnlNuevo.Visible = false;
                 LoadActives();
             }
 
@@ -269,6 +273,12 @@ namespace Sitio
             CargarSubFamilia();
             CargarEstado();
 
+            limpiar();
+
+        }
+
+        public void limpiar()
+        {
             txtCodigo.Text = "";
             txtdRegister_time.Text = DateTime.Now.ToString();
             txtdtBuy_time.Text = "";
@@ -292,7 +302,6 @@ namespace Sitio
             txtsModel.Text = "";
             txtsSerialNumber.Text = "";
             txtsUnit.Text = "";
-
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
